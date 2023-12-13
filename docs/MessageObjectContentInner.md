@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::MessageObjectContentInner
+# OpenAiApi::MessageObjectContentInner
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::MessageObjectContentInner.openapi_one_of
+OpenAiApi::MessageObjectContentInner.openapi_one_of
 # =>
 # [
 #   :'MessageContentImageFileObject',
@@ -28,10 +28,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::MessageObjectContentInner.build(data)
+OpenAiApi::MessageObjectContentInner.build(data)
 # => #<MessageContentImageFileObject:0x00007fdd4aab02a0>
 
-OpenaiOpenapiRb::MessageObjectContentInner.build(data_that_doesnt_match)
+OpenAiApi::MessageObjectContentInner.build(data_that_doesnt_match)
 # => nil
 ```
 

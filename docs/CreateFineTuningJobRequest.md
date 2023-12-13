@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateFineTuningJobRequest
+# OpenAiApi::CreateFineTuningJobRequest
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateFineTuningJobRequest.new(
+instance = OpenAiApi::CreateFineTuningJobRequest.new(
   model: null,
   training_file: file-abc123,
   hyperparameters: null,

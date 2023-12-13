@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::RunStepObject
+# OpenAiApi::RunStepObject
 
 ## Properties
 
@@ -25,7 +25,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::RunStepObject.new(
+instance = OpenAiApi::RunStepObject.new(
   id: null,
   object: null,
   created_at: null,

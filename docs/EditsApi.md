@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::EditsApi
+# OpenAiApi::EditsApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -19,19 +19,19 @@ Creates a new edit for the provided input, instruction, and parameters.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::EditsApi.new
-create_edit_request = OpenaiOpenapiRb::CreateEditRequest.new({instruction: 'Fix the spelling mistakes.', model: OpenaiOpenapiRb::CreateEditRequestModel.new}) # CreateEditRequest | 
+api_instance = OpenAiApi::EditsApi.new
+create_edit_request = OpenAiApi::CreateEditRequest.new({instruction: 'Fix the spelling mistakes.', model: OpenAiApi::CreateEditRequestModel.new}) # CreateEditRequest | 
 
 begin
   # Creates a new edit for the provided input, instruction, and parameters.
   result = api_instance.create_edit(create_edit_request)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling EditsApi->create_edit: #{e}"
 end
 ```
@@ -49,7 +49,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateEditResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling EditsApi->create_edit_with_http_info: #{e}"
 end
 ```

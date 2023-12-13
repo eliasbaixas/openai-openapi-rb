@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateCompletionRequest
+# OpenAiApi::CreateCompletionRequest
 
 ## Properties
 
@@ -27,7 +27,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateCompletionRequest.new(
+instance = OpenAiApi::CreateCompletionRequest.new(
   model: null,
   prompt: null,
   best_of: null,

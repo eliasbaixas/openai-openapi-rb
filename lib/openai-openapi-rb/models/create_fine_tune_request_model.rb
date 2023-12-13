@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenaiOpenapiRb
+module OpenAiApi
   # The name of the base model to fine-tune. You can select one of \"ada\", \"babbage\", \"curie\", \"davinci\", or a fine-tuned model created after 2022-04-21 and before 2023-08-22. To learn more about these models, see the [Models](/docs/models) documentation. 
   module CreateFineTuneRequestModel
     class << self
@@ -80,7 +80,7 @@ module OpenaiOpenapiRb
             return data.each_with_object({}) { |(k, v), hsh| hsh[k] = find_and_cast_into_type(sub_type, v) }
           end
         else # model
-          const = OpenaiOpenapiRb.const_get(klass)
+          const = OpenAiApi.const_get(klass)
           if const
             if const.respond_to?(:openapi_any_of) # nested anyOf model
               model = const.build(data)

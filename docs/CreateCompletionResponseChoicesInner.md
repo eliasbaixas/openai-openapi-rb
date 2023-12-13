@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateCompletionResponseChoicesInner
+# OpenAiApi::CreateCompletionResponseChoicesInner
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateCompletionResponseChoicesInner.new(
+instance = OpenAiApi::CreateCompletionResponseChoicesInner.new(
   finish_reason: null,
   index: null,
   logprobs: null,

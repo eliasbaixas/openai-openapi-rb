@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::DeleteAssistantFileResponse
+# OpenAiApi::DeleteAssistantFileResponse
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::DeleteAssistantFileResponse.new(
+instance = OpenAiApi::DeleteAssistantFileResponse.new(
   id: null,
   deleted: null,
   object: null

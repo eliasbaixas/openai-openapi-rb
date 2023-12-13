@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::FineTuningApi
+# OpenAiApi::FineTuningApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -23,19 +23,19 @@ Immediately cancel a fine-tune job.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FineTuningApi.new
+api_instance = OpenAiApi::FineTuningApi.new
 fine_tuning_job_id = 'ft-AF1WoRqd3aJAHsqc9NY7iL8F' # String | The ID of the fine-tuning job to cancel. 
 
 begin
   # Immediately cancel a fine-tune job. 
   result = api_instance.cancel_fine_tuning_job(fine_tuning_job_id)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->cancel_fine_tuning_job: #{e}"
 end
 ```
@@ -53,7 +53,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FineTuningJob>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->cancel_fine_tuning_job_with_http_info: #{e}"
 end
 ```
@@ -90,19 +90,19 @@ Creates a job that fine-tunes a specified model from a given dataset.  Response 
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FineTuningApi.new
-create_fine_tuning_job_request = OpenaiOpenapiRb::CreateFineTuningJobRequest.new({model: OpenaiOpenapiRb::CreateFineTuningJobRequestModel.new, training_file: 'file-abc123'}) # CreateFineTuningJobRequest | 
+api_instance = OpenAiApi::FineTuningApi.new
+create_fine_tuning_job_request = OpenAiApi::CreateFineTuningJobRequest.new({model: OpenAiApi::CreateFineTuningJobRequestModel.new, training_file: 'file-abc123'}) # CreateFineTuningJobRequest | 
 
 begin
   # Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
   result = api_instance.create_fine_tuning_job(create_fine_tuning_job_request)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->create_fine_tuning_job: #{e}"
 end
 ```
@@ -120,7 +120,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FineTuningJob>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->create_fine_tuning_job_with_http_info: #{e}"
 end
 ```
@@ -157,12 +157,12 @@ Get status updates for a fine-tuning job.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FineTuningApi.new
+api_instance = OpenAiApi::FineTuningApi.new
 fine_tuning_job_id = 'ft-AF1WoRqd3aJAHsqc9NY7iL8F' # String | The ID of the fine-tuning job to get events for. 
 opts = {
   after: 'after_example', # String | Identifier for the last event from the previous pagination request.
@@ -173,7 +173,7 @@ begin
   # Get status updates for a fine-tuning job. 
   result = api_instance.list_fine_tuning_events(fine_tuning_job_id, opts)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->list_fine_tuning_events: #{e}"
 end
 ```
@@ -191,7 +191,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListFineTuningJobEventsResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->list_fine_tuning_events_with_http_info: #{e}"
 end
 ```
@@ -230,12 +230,12 @@ List your organization's fine-tuning jobs
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FineTuningApi.new
+api_instance = OpenAiApi::FineTuningApi.new
 opts = {
   after: 'after_example', # String | Identifier for the last job from the previous pagination request.
   limit: 56 # Integer | Number of fine-tuning jobs to retrieve.
@@ -245,7 +245,7 @@ begin
   # List your organization's fine-tuning jobs 
   result = api_instance.list_paginated_fine_tuning_jobs(opts)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->list_paginated_fine_tuning_jobs: #{e}"
 end
 ```
@@ -263,7 +263,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListPaginatedFineTuningJobsResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->list_paginated_fine_tuning_jobs_with_http_info: #{e}"
 end
 ```
@@ -301,19 +301,19 @@ Get info about a fine-tuning job.  [Learn more about fine-tuning](/docs/guides/f
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FineTuningApi.new
+api_instance = OpenAiApi::FineTuningApi.new
 fine_tuning_job_id = 'ft-AF1WoRqd3aJAHsqc9NY7iL8F' # String | The ID of the fine-tuning job. 
 
 begin
   # Get info about a fine-tuning job.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
   result = api_instance.retrieve_fine_tuning_job(fine_tuning_job_id)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->retrieve_fine_tuning_job: #{e}"
 end
 ```
@@ -331,7 +331,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FineTuningJob>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FineTuningApi->retrieve_fine_tuning_job_with_http_info: #{e}"
 end
 ```

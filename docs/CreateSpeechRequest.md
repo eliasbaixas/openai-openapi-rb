@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateSpeechRequest
+# OpenAiApi::CreateSpeechRequest
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateSpeechRequest.new(
+instance = OpenAiApi::CreateSpeechRequest.new(
   model: null,
   input: null,
   voice: null,

@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::Model
+# OpenAiApi::Model
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::Model.new(
+instance = OpenAiApi::Model.new(
   id: null,
   created: null,
   object: null,

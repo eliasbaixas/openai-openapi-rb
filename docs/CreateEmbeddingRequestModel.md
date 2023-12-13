@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateEmbeddingRequestModel
+# OpenAiApi::CreateEmbeddingRequestModel
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateEmbeddingRequestModel.new()
+instance = OpenAiApi::CreateEmbeddingRequestModel.new()
 ```
 

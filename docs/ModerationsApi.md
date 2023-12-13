@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ModerationsApi
+# OpenAiApi::ModerationsApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -19,19 +19,19 @@ Classifies if text violates OpenAI's Content Policy
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::ModerationsApi.new
-create_moderation_request = OpenaiOpenapiRb::CreateModerationRequest.new({input: nil}) # CreateModerationRequest | 
+api_instance = OpenAiApi::ModerationsApi.new
+create_moderation_request = OpenAiApi::CreateModerationRequest.new({input: nil}) # CreateModerationRequest | 
 
 begin
   # Classifies if text violates OpenAI's Content Policy
   result = api_instance.create_moderation(create_moderation_request)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ModerationsApi->create_moderation: #{e}"
 end
 ```
@@ -49,7 +49,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateModerationResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ModerationsApi->create_moderation_with_http_info: #{e}"
 end
 ```

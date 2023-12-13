@@ -1,6 +1,6 @@
 # openai-openapi-rb
 
-OpenaiOpenapiRb - the Ruby gem for the OpenAI API
+OpenAiApi - the Ruby gem for the OpenAI API
 
 The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
 
@@ -58,14 +58,14 @@ Please follow the [installation](#installation) procedure and then run the follo
 require 'openai-openapi-rb'
 
 # Setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
   # Configure a proc to get access tokens in lieu of the static access_token configuration
   config.access_token_getter = -> { 'YOUR TOKEN GETTER PROC' } 
 end
 
-api_instance = OpenaiOpenapiRb::AssistantsApi.new
+api_instance = OpenAiApi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread to which this run belongs.
 run_id = 'run_id_example' # String | The ID of the run to cancel.
 
@@ -73,7 +73,7 @@ begin
   #Cancels a run that is `in_progress`.
   result = api_instance.cancel_run(thread_id, run_id)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Exception when calling AssistantsApi->cancel_run: #{e}"
 end
 
@@ -85,235 +85,235 @@ All URIs are relative to *https://api.openai.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OpenaiOpenapiRb::AssistantsApi* | [**cancel_run**](docs/AssistantsApi.md#cancel_run) | **POST** /threads/{thread_id}/runs/{run_id}/cancel | Cancels a run that is `in_progress`.
-*OpenaiOpenapiRb::AssistantsApi* | [**create_assistant**](docs/AssistantsApi.md#create_assistant) | **POST** /assistants | Create an assistant with a model and instructions.
-*OpenaiOpenapiRb::AssistantsApi* | [**create_assistant_file**](docs/AssistantsApi.md#create_assistant_file) | **POST** /assistants/{assistant_id}/files | Create an assistant file by attaching a [File](/docs/api-reference/files) to an [assistant](/docs/api-reference/assistants).
-*OpenaiOpenapiRb::AssistantsApi* | [**create_message**](docs/AssistantsApi.md#create_message) | **POST** /threads/{thread_id}/messages | Create a message.
-*OpenaiOpenapiRb::AssistantsApi* | [**create_run**](docs/AssistantsApi.md#create_run) | **POST** /threads/{thread_id}/runs | Create a run.
-*OpenaiOpenapiRb::AssistantsApi* | [**create_thread**](docs/AssistantsApi.md#create_thread) | **POST** /threads | Create a thread.
-*OpenaiOpenapiRb::AssistantsApi* | [**create_thread_and_run**](docs/AssistantsApi.md#create_thread_and_run) | **POST** /threads/runs | Create a thread and run it in one request.
-*OpenaiOpenapiRb::AssistantsApi* | [**delete_assistant**](docs/AssistantsApi.md#delete_assistant) | **DELETE** /assistants/{assistant_id} | Delete an assistant.
-*OpenaiOpenapiRb::AssistantsApi* | [**delete_assistant_file**](docs/AssistantsApi.md#delete_assistant_file) | **DELETE** /assistants/{assistant_id}/files/{file_id} | Delete an assistant file.
-*OpenaiOpenapiRb::AssistantsApi* | [**delete_thread**](docs/AssistantsApi.md#delete_thread) | **DELETE** /threads/{thread_id} | Delete a thread.
-*OpenaiOpenapiRb::AssistantsApi* | [**get_assistant**](docs/AssistantsApi.md#get_assistant) | **GET** /assistants/{assistant_id} | Retrieves an assistant.
-*OpenaiOpenapiRb::AssistantsApi* | [**get_assistant_file**](docs/AssistantsApi.md#get_assistant_file) | **GET** /assistants/{assistant_id}/files/{file_id} | Retrieves an AssistantFile.
-*OpenaiOpenapiRb::AssistantsApi* | [**get_message**](docs/AssistantsApi.md#get_message) | **GET** /threads/{thread_id}/messages/{message_id} | Retrieve a message.
-*OpenaiOpenapiRb::AssistantsApi* | [**get_message_file**](docs/AssistantsApi.md#get_message_file) | **GET** /threads/{thread_id}/messages/{message_id}/files/{file_id} | Retrieves a message file.
-*OpenaiOpenapiRb::AssistantsApi* | [**get_run**](docs/AssistantsApi.md#get_run) | **GET** /threads/{thread_id}/runs/{run_id} | Retrieves a run.
-*OpenaiOpenapiRb::AssistantsApi* | [**get_run_step**](docs/AssistantsApi.md#get_run_step) | **GET** /threads/{thread_id}/runs/{run_id}/steps/{step_id} | Retrieves a run step.
-*OpenaiOpenapiRb::AssistantsApi* | [**get_thread**](docs/AssistantsApi.md#get_thread) | **GET** /threads/{thread_id} | Retrieves a thread.
-*OpenaiOpenapiRb::AssistantsApi* | [**list_assistant_files**](docs/AssistantsApi.md#list_assistant_files) | **GET** /assistants/{assistant_id}/files | Returns a list of assistant files.
-*OpenaiOpenapiRb::AssistantsApi* | [**list_assistants**](docs/AssistantsApi.md#list_assistants) | **GET** /assistants | Returns a list of assistants.
-*OpenaiOpenapiRb::AssistantsApi* | [**list_message_files**](docs/AssistantsApi.md#list_message_files) | **GET** /threads/{thread_id}/messages/{message_id}/files | Returns a list of message files.
-*OpenaiOpenapiRb::AssistantsApi* | [**list_messages**](docs/AssistantsApi.md#list_messages) | **GET** /threads/{thread_id}/messages | Returns a list of messages for a given thread.
-*OpenaiOpenapiRb::AssistantsApi* | [**list_run_steps**](docs/AssistantsApi.md#list_run_steps) | **GET** /threads/{thread_id}/runs/{run_id}/steps | Returns a list of run steps belonging to a run.
-*OpenaiOpenapiRb::AssistantsApi* | [**list_runs**](docs/AssistantsApi.md#list_runs) | **GET** /threads/{thread_id}/runs | Returns a list of runs belonging to a thread.
-*OpenaiOpenapiRb::AssistantsApi* | [**modify_assistant**](docs/AssistantsApi.md#modify_assistant) | **POST** /assistants/{assistant_id} | Modifies an assistant.
-*OpenaiOpenapiRb::AssistantsApi* | [**modify_message**](docs/AssistantsApi.md#modify_message) | **POST** /threads/{thread_id}/messages/{message_id} | Modifies a message.
-*OpenaiOpenapiRb::AssistantsApi* | [**modify_run**](docs/AssistantsApi.md#modify_run) | **POST** /threads/{thread_id}/runs/{run_id} | Modifies a run.
-*OpenaiOpenapiRb::AssistantsApi* | [**modify_thread**](docs/AssistantsApi.md#modify_thread) | **POST** /threads/{thread_id} | Modifies a thread.
-*OpenaiOpenapiRb::AssistantsApi* | [**submit_tool_ouputs_to_run**](docs/AssistantsApi.md#submit_tool_ouputs_to_run) | **POST** /threads/{thread_id}/runs/{run_id}/submit_tool_outputs | When a run has the `status: \"requires_action\"` and `required_action.type` is `submit_tool_outputs`, this endpoint can be used to submit the outputs from the tool calls once they're all completed. All outputs must be submitted in a single request. 
-*OpenaiOpenapiRb::AudioApi* | [**create_speech**](docs/AudioApi.md#create_speech) | **POST** /audio/speech | Generates audio from the input text.
-*OpenaiOpenapiRb::AudioApi* | [**create_transcription**](docs/AudioApi.md#create_transcription) | **POST** /audio/transcriptions | Transcribes audio into the input language.
-*OpenaiOpenapiRb::AudioApi* | [**create_translation**](docs/AudioApi.md#create_translation) | **POST** /audio/translations | Translates audio into English.
-*OpenaiOpenapiRb::ChatApi* | [**create_chat_completion**](docs/ChatApi.md#create_chat_completion) | **POST** /chat/completions | Creates a model response for the given chat conversation.
-*OpenaiOpenapiRb::CompletionsApi* | [**create_completion**](docs/CompletionsApi.md#create_completion) | **POST** /completions | Creates a completion for the provided prompt and parameters.
-*OpenaiOpenapiRb::EditsApi* | [**create_edit**](docs/EditsApi.md#create_edit) | **POST** /edits | Creates a new edit for the provided input, instruction, and parameters.
-*OpenaiOpenapiRb::EmbeddingsApi* | [**create_embedding**](docs/EmbeddingsApi.md#create_embedding) | **POST** /embeddings | Creates an embedding vector representing the input text.
-*OpenaiOpenapiRb::FilesApi* | [**create_file**](docs/FilesApi.md#create_file) | **POST** /files | Upload a file that can be used across various endpoints. The size of all the files uploaded by one organization can be up to 100 GB.  The size of individual files can be a maximum of 512 MB. See the [Assistants Tools guide](/docs/assistants/tools) to learn more about the types of files supported. The Fine-tuning API only supports `.jsonl` files.  Please [contact us](https://help.openai.com/) if you need to increase these storage limits. 
-*OpenaiOpenapiRb::FilesApi* | [**delete_file**](docs/FilesApi.md#delete_file) | **DELETE** /files/{file_id} | Delete a file.
-*OpenaiOpenapiRb::FilesApi* | [**download_file**](docs/FilesApi.md#download_file) | **GET** /files/{file_id}/content | Returns the contents of the specified file.
-*OpenaiOpenapiRb::FilesApi* | [**list_files**](docs/FilesApi.md#list_files) | **GET** /files | Returns a list of files that belong to the user's organization.
-*OpenaiOpenapiRb::FilesApi* | [**retrieve_file**](docs/FilesApi.md#retrieve_file) | **GET** /files/{file_id} | Returns information about a specific file.
-*OpenaiOpenapiRb::FineTunesApi* | [**cancel_fine_tune**](docs/FineTunesApi.md#cancel_fine_tune) | **POST** /fine-tunes/{fine_tune_id}/cancel | Immediately cancel a fine-tune job. 
-*OpenaiOpenapiRb::FineTunesApi* | [**create_fine_tune**](docs/FineTunesApi.md#create_fine_tune) | **POST** /fine-tunes | Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/legacy-fine-tuning) 
-*OpenaiOpenapiRb::FineTunesApi* | [**list_fine_tune_events**](docs/FineTunesApi.md#list_fine_tune_events) | **GET** /fine-tunes/{fine_tune_id}/events | Get fine-grained status updates for a fine-tune job. 
-*OpenaiOpenapiRb::FineTunesApi* | [**list_fine_tunes**](docs/FineTunesApi.md#list_fine_tunes) | **GET** /fine-tunes | List your organization's fine-tuning jobs 
-*OpenaiOpenapiRb::FineTunesApi* | [**retrieve_fine_tune**](docs/FineTunesApi.md#retrieve_fine_tune) | **GET** /fine-tunes/{fine_tune_id} | Gets info about the fine-tune job.  [Learn more about fine-tuning](/docs/guides/legacy-fine-tuning) 
-*OpenaiOpenapiRb::FineTuningApi* | [**cancel_fine_tuning_job**](docs/FineTuningApi.md#cancel_fine_tuning_job) | **POST** /fine_tuning/jobs/{fine_tuning_job_id}/cancel | Immediately cancel a fine-tune job. 
-*OpenaiOpenapiRb::FineTuningApi* | [**create_fine_tuning_job**](docs/FineTuningApi.md#create_fine_tuning_job) | **POST** /fine_tuning/jobs | Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
-*OpenaiOpenapiRb::FineTuningApi* | [**list_fine_tuning_events**](docs/FineTuningApi.md#list_fine_tuning_events) | **GET** /fine_tuning/jobs/{fine_tuning_job_id}/events | Get status updates for a fine-tuning job. 
-*OpenaiOpenapiRb::FineTuningApi* | [**list_paginated_fine_tuning_jobs**](docs/FineTuningApi.md#list_paginated_fine_tuning_jobs) | **GET** /fine_tuning/jobs | List your organization's fine-tuning jobs 
-*OpenaiOpenapiRb::FineTuningApi* | [**retrieve_fine_tuning_job**](docs/FineTuningApi.md#retrieve_fine_tuning_job) | **GET** /fine_tuning/jobs/{fine_tuning_job_id} | Get info about a fine-tuning job.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
-*OpenaiOpenapiRb::ImagesApi* | [**create_image**](docs/ImagesApi.md#create_image) | **POST** /images/generations | Creates an image given a prompt.
-*OpenaiOpenapiRb::ImagesApi* | [**create_image_edit**](docs/ImagesApi.md#create_image_edit) | **POST** /images/edits | Creates an edited or extended image given an original image and a prompt.
-*OpenaiOpenapiRb::ImagesApi* | [**create_image_variation**](docs/ImagesApi.md#create_image_variation) | **POST** /images/variations | Creates a variation of a given image.
-*OpenaiOpenapiRb::ModelsApi* | [**delete_model**](docs/ModelsApi.md#delete_model) | **DELETE** /models/{model} | Delete a fine-tuned model. You must have the Owner role in your organization to delete a model.
-*OpenaiOpenapiRb::ModelsApi* | [**list_models**](docs/ModelsApi.md#list_models) | **GET** /models | Lists the currently available models, and provides basic information about each one such as the owner and availability.
-*OpenaiOpenapiRb::ModelsApi* | [**retrieve_model**](docs/ModelsApi.md#retrieve_model) | **GET** /models/{model} | Retrieves a model instance, providing basic information about the model such as the owner and permissioning.
-*OpenaiOpenapiRb::ModerationsApi* | [**create_moderation**](docs/ModerationsApi.md#create_moderation) | **POST** /moderations | Classifies if text violates OpenAI's Content Policy
+*OpenAiApi::AssistantsApi* | [**cancel_run**](docs/AssistantsApi.md#cancel_run) | **POST** /threads/{thread_id}/runs/{run_id}/cancel | Cancels a run that is `in_progress`.
+*OpenAiApi::AssistantsApi* | [**create_assistant**](docs/AssistantsApi.md#create_assistant) | **POST** /assistants | Create an assistant with a model and instructions.
+*OpenAiApi::AssistantsApi* | [**create_assistant_file**](docs/AssistantsApi.md#create_assistant_file) | **POST** /assistants/{assistant_id}/files | Create an assistant file by attaching a [File](/docs/api-reference/files) to an [assistant](/docs/api-reference/assistants).
+*OpenAiApi::AssistantsApi* | [**create_message**](docs/AssistantsApi.md#create_message) | **POST** /threads/{thread_id}/messages | Create a message.
+*OpenAiApi::AssistantsApi* | [**create_run**](docs/AssistantsApi.md#create_run) | **POST** /threads/{thread_id}/runs | Create a run.
+*OpenAiApi::AssistantsApi* | [**create_thread**](docs/AssistantsApi.md#create_thread) | **POST** /threads | Create a thread.
+*OpenAiApi::AssistantsApi* | [**create_thread_and_run**](docs/AssistantsApi.md#create_thread_and_run) | **POST** /threads/runs | Create a thread and run it in one request.
+*OpenAiApi::AssistantsApi* | [**delete_assistant**](docs/AssistantsApi.md#delete_assistant) | **DELETE** /assistants/{assistant_id} | Delete an assistant.
+*OpenAiApi::AssistantsApi* | [**delete_assistant_file**](docs/AssistantsApi.md#delete_assistant_file) | **DELETE** /assistants/{assistant_id}/files/{file_id} | Delete an assistant file.
+*OpenAiApi::AssistantsApi* | [**delete_thread**](docs/AssistantsApi.md#delete_thread) | **DELETE** /threads/{thread_id} | Delete a thread.
+*OpenAiApi::AssistantsApi* | [**get_assistant**](docs/AssistantsApi.md#get_assistant) | **GET** /assistants/{assistant_id} | Retrieves an assistant.
+*OpenAiApi::AssistantsApi* | [**get_assistant_file**](docs/AssistantsApi.md#get_assistant_file) | **GET** /assistants/{assistant_id}/files/{file_id} | Retrieves an AssistantFile.
+*OpenAiApi::AssistantsApi* | [**get_message**](docs/AssistantsApi.md#get_message) | **GET** /threads/{thread_id}/messages/{message_id} | Retrieve a message.
+*OpenAiApi::AssistantsApi* | [**get_message_file**](docs/AssistantsApi.md#get_message_file) | **GET** /threads/{thread_id}/messages/{message_id}/files/{file_id} | Retrieves a message file.
+*OpenAiApi::AssistantsApi* | [**get_run**](docs/AssistantsApi.md#get_run) | **GET** /threads/{thread_id}/runs/{run_id} | Retrieves a run.
+*OpenAiApi::AssistantsApi* | [**get_run_step**](docs/AssistantsApi.md#get_run_step) | **GET** /threads/{thread_id}/runs/{run_id}/steps/{step_id} | Retrieves a run step.
+*OpenAiApi::AssistantsApi* | [**get_thread**](docs/AssistantsApi.md#get_thread) | **GET** /threads/{thread_id} | Retrieves a thread.
+*OpenAiApi::AssistantsApi* | [**list_assistant_files**](docs/AssistantsApi.md#list_assistant_files) | **GET** /assistants/{assistant_id}/files | Returns a list of assistant files.
+*OpenAiApi::AssistantsApi* | [**list_assistants**](docs/AssistantsApi.md#list_assistants) | **GET** /assistants | Returns a list of assistants.
+*OpenAiApi::AssistantsApi* | [**list_message_files**](docs/AssistantsApi.md#list_message_files) | **GET** /threads/{thread_id}/messages/{message_id}/files | Returns a list of message files.
+*OpenAiApi::AssistantsApi* | [**list_messages**](docs/AssistantsApi.md#list_messages) | **GET** /threads/{thread_id}/messages | Returns a list of messages for a given thread.
+*OpenAiApi::AssistantsApi* | [**list_run_steps**](docs/AssistantsApi.md#list_run_steps) | **GET** /threads/{thread_id}/runs/{run_id}/steps | Returns a list of run steps belonging to a run.
+*OpenAiApi::AssistantsApi* | [**list_runs**](docs/AssistantsApi.md#list_runs) | **GET** /threads/{thread_id}/runs | Returns a list of runs belonging to a thread.
+*OpenAiApi::AssistantsApi* | [**modify_assistant**](docs/AssistantsApi.md#modify_assistant) | **POST** /assistants/{assistant_id} | Modifies an assistant.
+*OpenAiApi::AssistantsApi* | [**modify_message**](docs/AssistantsApi.md#modify_message) | **POST** /threads/{thread_id}/messages/{message_id} | Modifies a message.
+*OpenAiApi::AssistantsApi* | [**modify_run**](docs/AssistantsApi.md#modify_run) | **POST** /threads/{thread_id}/runs/{run_id} | Modifies a run.
+*OpenAiApi::AssistantsApi* | [**modify_thread**](docs/AssistantsApi.md#modify_thread) | **POST** /threads/{thread_id} | Modifies a thread.
+*OpenAiApi::AssistantsApi* | [**submit_tool_ouputs_to_run**](docs/AssistantsApi.md#submit_tool_ouputs_to_run) | **POST** /threads/{thread_id}/runs/{run_id}/submit_tool_outputs | When a run has the `status: \"requires_action\"` and `required_action.type` is `submit_tool_outputs`, this endpoint can be used to submit the outputs from the tool calls once they're all completed. All outputs must be submitted in a single request. 
+*OpenAiApi::AudioApi* | [**create_speech**](docs/AudioApi.md#create_speech) | **POST** /audio/speech | Generates audio from the input text.
+*OpenAiApi::AudioApi* | [**create_transcription**](docs/AudioApi.md#create_transcription) | **POST** /audio/transcriptions | Transcribes audio into the input language.
+*OpenAiApi::AudioApi* | [**create_translation**](docs/AudioApi.md#create_translation) | **POST** /audio/translations | Translates audio into English.
+*OpenAiApi::ChatApi* | [**create_chat_completion**](docs/ChatApi.md#create_chat_completion) | **POST** /chat/completions | Creates a model response for the given chat conversation.
+*OpenAiApi::CompletionsApi* | [**create_completion**](docs/CompletionsApi.md#create_completion) | **POST** /completions | Creates a completion for the provided prompt and parameters.
+*OpenAiApi::EditsApi* | [**create_edit**](docs/EditsApi.md#create_edit) | **POST** /edits | Creates a new edit for the provided input, instruction, and parameters.
+*OpenAiApi::EmbeddingsApi* | [**create_embedding**](docs/EmbeddingsApi.md#create_embedding) | **POST** /embeddings | Creates an embedding vector representing the input text.
+*OpenAiApi::FilesApi* | [**create_file**](docs/FilesApi.md#create_file) | **POST** /files | Upload a file that can be used across various endpoints. The size of all the files uploaded by one organization can be up to 100 GB.  The size of individual files can be a maximum of 512 MB. See the [Assistants Tools guide](/docs/assistants/tools) to learn more about the types of files supported. The Fine-tuning API only supports `.jsonl` files.  Please [contact us](https://help.openai.com/) if you need to increase these storage limits. 
+*OpenAiApi::FilesApi* | [**delete_file**](docs/FilesApi.md#delete_file) | **DELETE** /files/{file_id} | Delete a file.
+*OpenAiApi::FilesApi* | [**download_file**](docs/FilesApi.md#download_file) | **GET** /files/{file_id}/content | Returns the contents of the specified file.
+*OpenAiApi::FilesApi* | [**list_files**](docs/FilesApi.md#list_files) | **GET** /files | Returns a list of files that belong to the user's organization.
+*OpenAiApi::FilesApi* | [**retrieve_file**](docs/FilesApi.md#retrieve_file) | **GET** /files/{file_id} | Returns information about a specific file.
+*OpenAiApi::FineTunesApi* | [**cancel_fine_tune**](docs/FineTunesApi.md#cancel_fine_tune) | **POST** /fine-tunes/{fine_tune_id}/cancel | Immediately cancel a fine-tune job. 
+*OpenAiApi::FineTunesApi* | [**create_fine_tune**](docs/FineTunesApi.md#create_fine_tune) | **POST** /fine-tunes | Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/legacy-fine-tuning) 
+*OpenAiApi::FineTunesApi* | [**list_fine_tune_events**](docs/FineTunesApi.md#list_fine_tune_events) | **GET** /fine-tunes/{fine_tune_id}/events | Get fine-grained status updates for a fine-tune job. 
+*OpenAiApi::FineTunesApi* | [**list_fine_tunes**](docs/FineTunesApi.md#list_fine_tunes) | **GET** /fine-tunes | List your organization's fine-tuning jobs 
+*OpenAiApi::FineTunesApi* | [**retrieve_fine_tune**](docs/FineTunesApi.md#retrieve_fine_tune) | **GET** /fine-tunes/{fine_tune_id} | Gets info about the fine-tune job.  [Learn more about fine-tuning](/docs/guides/legacy-fine-tuning) 
+*OpenAiApi::FineTuningApi* | [**cancel_fine_tuning_job**](docs/FineTuningApi.md#cancel_fine_tuning_job) | **POST** /fine_tuning/jobs/{fine_tuning_job_id}/cancel | Immediately cancel a fine-tune job. 
+*OpenAiApi::FineTuningApi* | [**create_fine_tuning_job**](docs/FineTuningApi.md#create_fine_tuning_job) | **POST** /fine_tuning/jobs | Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
+*OpenAiApi::FineTuningApi* | [**list_fine_tuning_events**](docs/FineTuningApi.md#list_fine_tuning_events) | **GET** /fine_tuning/jobs/{fine_tuning_job_id}/events | Get status updates for a fine-tuning job. 
+*OpenAiApi::FineTuningApi* | [**list_paginated_fine_tuning_jobs**](docs/FineTuningApi.md#list_paginated_fine_tuning_jobs) | **GET** /fine_tuning/jobs | List your organization's fine-tuning jobs 
+*OpenAiApi::FineTuningApi* | [**retrieve_fine_tuning_job**](docs/FineTuningApi.md#retrieve_fine_tuning_job) | **GET** /fine_tuning/jobs/{fine_tuning_job_id} | Get info about a fine-tuning job.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
+*OpenAiApi::ImagesApi* | [**create_image**](docs/ImagesApi.md#create_image) | **POST** /images/generations | Creates an image given a prompt.
+*OpenAiApi::ImagesApi* | [**create_image_edit**](docs/ImagesApi.md#create_image_edit) | **POST** /images/edits | Creates an edited or extended image given an original image and a prompt.
+*OpenAiApi::ImagesApi* | [**create_image_variation**](docs/ImagesApi.md#create_image_variation) | **POST** /images/variations | Creates a variation of a given image.
+*OpenAiApi::ModelsApi* | [**delete_model**](docs/ModelsApi.md#delete_model) | **DELETE** /models/{model} | Delete a fine-tuned model. You must have the Owner role in your organization to delete a model.
+*OpenAiApi::ModelsApi* | [**list_models**](docs/ModelsApi.md#list_models) | **GET** /models | Lists the currently available models, and provides basic information about each one such as the owner and availability.
+*OpenAiApi::ModelsApi* | [**retrieve_model**](docs/ModelsApi.md#retrieve_model) | **GET** /models/{model} | Retrieves a model instance, providing basic information about the model such as the owner and permissioning.
+*OpenAiApi::ModerationsApi* | [**create_moderation**](docs/ModerationsApi.md#create_moderation) | **POST** /moderations | Classifies if text violates OpenAI's Content Policy
 
 
 ## Documentation for Models
 
- - [OpenaiOpenapiRb::AssistantFileObject](docs/AssistantFileObject.md)
- - [OpenaiOpenapiRb::AssistantObject](docs/AssistantObject.md)
- - [OpenaiOpenapiRb::AssistantObjectToolsInner](docs/AssistantObjectToolsInner.md)
- - [OpenaiOpenapiRb::AssistantToolsCode](docs/AssistantToolsCode.md)
- - [OpenaiOpenapiRb::AssistantToolsFunction](docs/AssistantToolsFunction.md)
- - [OpenaiOpenapiRb::AssistantToolsRetrieval](docs/AssistantToolsRetrieval.md)
- - [OpenaiOpenapiRb::ChatCompletionFunctionCallOption](docs/ChatCompletionFunctionCallOption.md)
- - [OpenaiOpenapiRb::ChatCompletionFunctions](docs/ChatCompletionFunctions.md)
- - [OpenaiOpenapiRb::ChatCompletionMessageToolCall](docs/ChatCompletionMessageToolCall.md)
- - [OpenaiOpenapiRb::ChatCompletionMessageToolCallChunk](docs/ChatCompletionMessageToolCallChunk.md)
- - [OpenaiOpenapiRb::ChatCompletionMessageToolCallChunkFunction](docs/ChatCompletionMessageToolCallChunkFunction.md)
- - [OpenaiOpenapiRb::ChatCompletionMessageToolCallFunction](docs/ChatCompletionMessageToolCallFunction.md)
- - [OpenaiOpenapiRb::ChatCompletionNamedToolChoice](docs/ChatCompletionNamedToolChoice.md)
- - [OpenaiOpenapiRb::ChatCompletionNamedToolChoiceFunction](docs/ChatCompletionNamedToolChoiceFunction.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestAssistantMessage](docs/ChatCompletionRequestAssistantMessage.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestAssistantMessageFunctionCall](docs/ChatCompletionRequestAssistantMessageFunctionCall.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestFunctionMessage](docs/ChatCompletionRequestFunctionMessage.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestMessage](docs/ChatCompletionRequestMessage.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestMessageContentPart](docs/ChatCompletionRequestMessageContentPart.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestMessageContentPartImage](docs/ChatCompletionRequestMessageContentPartImage.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestMessageContentPartImageImageUrl](docs/ChatCompletionRequestMessageContentPartImageImageUrl.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestMessageContentPartText](docs/ChatCompletionRequestMessageContentPartText.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestSystemMessage](docs/ChatCompletionRequestSystemMessage.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestToolMessage](docs/ChatCompletionRequestToolMessage.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestUserMessage](docs/ChatCompletionRequestUserMessage.md)
- - [OpenaiOpenapiRb::ChatCompletionRequestUserMessageContent](docs/ChatCompletionRequestUserMessageContent.md)
- - [OpenaiOpenapiRb::ChatCompletionResponseMessage](docs/ChatCompletionResponseMessage.md)
- - [OpenaiOpenapiRb::ChatCompletionRole](docs/ChatCompletionRole.md)
- - [OpenaiOpenapiRb::ChatCompletionStreamResponseDelta](docs/ChatCompletionStreamResponseDelta.md)
- - [OpenaiOpenapiRb::ChatCompletionStreamResponseDeltaFunctionCall](docs/ChatCompletionStreamResponseDeltaFunctionCall.md)
- - [OpenaiOpenapiRb::ChatCompletionTool](docs/ChatCompletionTool.md)
- - [OpenaiOpenapiRb::ChatCompletionToolChoiceOption](docs/ChatCompletionToolChoiceOption.md)
- - [OpenaiOpenapiRb::CompletionUsage](docs/CompletionUsage.md)
- - [OpenaiOpenapiRb::CreateAssistantFileRequest](docs/CreateAssistantFileRequest.md)
- - [OpenaiOpenapiRb::CreateAssistantRequest](docs/CreateAssistantRequest.md)
- - [OpenaiOpenapiRb::CreateChatCompletionFunctionResponse](docs/CreateChatCompletionFunctionResponse.md)
- - [OpenaiOpenapiRb::CreateChatCompletionFunctionResponseChoicesInner](docs/CreateChatCompletionFunctionResponseChoicesInner.md)
- - [OpenaiOpenapiRb::CreateChatCompletionRequest](docs/CreateChatCompletionRequest.md)
- - [OpenaiOpenapiRb::CreateChatCompletionRequestFunctionCall](docs/CreateChatCompletionRequestFunctionCall.md)
- - [OpenaiOpenapiRb::CreateChatCompletionRequestModel](docs/CreateChatCompletionRequestModel.md)
- - [OpenaiOpenapiRb::CreateChatCompletionRequestResponseFormat](docs/CreateChatCompletionRequestResponseFormat.md)
- - [OpenaiOpenapiRb::CreateChatCompletionRequestStop](docs/CreateChatCompletionRequestStop.md)
- - [OpenaiOpenapiRb::CreateChatCompletionResponse](docs/CreateChatCompletionResponse.md)
- - [OpenaiOpenapiRb::CreateChatCompletionResponseChoicesInner](docs/CreateChatCompletionResponseChoicesInner.md)
- - [OpenaiOpenapiRb::CreateChatCompletionStreamResponse](docs/CreateChatCompletionStreamResponse.md)
- - [OpenaiOpenapiRb::CreateChatCompletionStreamResponseChoicesInner](docs/CreateChatCompletionStreamResponseChoicesInner.md)
- - [OpenaiOpenapiRb::CreateCompletionRequest](docs/CreateCompletionRequest.md)
- - [OpenaiOpenapiRb::CreateCompletionRequestModel](docs/CreateCompletionRequestModel.md)
- - [OpenaiOpenapiRb::CreateCompletionRequestPrompt](docs/CreateCompletionRequestPrompt.md)
- - [OpenaiOpenapiRb::CreateCompletionRequestStop](docs/CreateCompletionRequestStop.md)
- - [OpenaiOpenapiRb::CreateCompletionResponse](docs/CreateCompletionResponse.md)
- - [OpenaiOpenapiRb::CreateCompletionResponseChoicesInner](docs/CreateCompletionResponseChoicesInner.md)
- - [OpenaiOpenapiRb::CreateCompletionResponseChoicesInnerLogprobs](docs/CreateCompletionResponseChoicesInnerLogprobs.md)
- - [OpenaiOpenapiRb::CreateEditRequest](docs/CreateEditRequest.md)
- - [OpenaiOpenapiRb::CreateEditRequestModel](docs/CreateEditRequestModel.md)
- - [OpenaiOpenapiRb::CreateEditResponse](docs/CreateEditResponse.md)
- - [OpenaiOpenapiRb::CreateEditResponseChoicesInner](docs/CreateEditResponseChoicesInner.md)
- - [OpenaiOpenapiRb::CreateEmbeddingRequest](docs/CreateEmbeddingRequest.md)
- - [OpenaiOpenapiRb::CreateEmbeddingRequestInput](docs/CreateEmbeddingRequestInput.md)
- - [OpenaiOpenapiRb::CreateEmbeddingRequestModel](docs/CreateEmbeddingRequestModel.md)
- - [OpenaiOpenapiRb::CreateEmbeddingResponse](docs/CreateEmbeddingResponse.md)
- - [OpenaiOpenapiRb::CreateEmbeddingResponseUsage](docs/CreateEmbeddingResponseUsage.md)
- - [OpenaiOpenapiRb::CreateFineTuneRequest](docs/CreateFineTuneRequest.md)
- - [OpenaiOpenapiRb::CreateFineTuneRequestHyperparameters](docs/CreateFineTuneRequestHyperparameters.md)
- - [OpenaiOpenapiRb::CreateFineTuneRequestHyperparametersNEpochs](docs/CreateFineTuneRequestHyperparametersNEpochs.md)
- - [OpenaiOpenapiRb::CreateFineTuneRequestModel](docs/CreateFineTuneRequestModel.md)
- - [OpenaiOpenapiRb::CreateFineTuningJobRequest](docs/CreateFineTuningJobRequest.md)
- - [OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparameters](docs/CreateFineTuningJobRequestHyperparameters.md)
- - [OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersBatchSize](docs/CreateFineTuningJobRequestHyperparametersBatchSize.md)
- - [OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier](docs/CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.md)
- - [OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersNEpochs](docs/CreateFineTuningJobRequestHyperparametersNEpochs.md)
- - [OpenaiOpenapiRb::CreateFineTuningJobRequestModel](docs/CreateFineTuningJobRequestModel.md)
- - [OpenaiOpenapiRb::CreateImageEditRequestModel](docs/CreateImageEditRequestModel.md)
- - [OpenaiOpenapiRb::CreateImageRequest](docs/CreateImageRequest.md)
- - [OpenaiOpenapiRb::CreateImageRequestModel](docs/CreateImageRequestModel.md)
- - [OpenaiOpenapiRb::CreateMessageRequest](docs/CreateMessageRequest.md)
- - [OpenaiOpenapiRb::CreateModerationRequest](docs/CreateModerationRequest.md)
- - [OpenaiOpenapiRb::CreateModerationRequestInput](docs/CreateModerationRequestInput.md)
- - [OpenaiOpenapiRb::CreateModerationRequestModel](docs/CreateModerationRequestModel.md)
- - [OpenaiOpenapiRb::CreateModerationResponse](docs/CreateModerationResponse.md)
- - [OpenaiOpenapiRb::CreateModerationResponseResultsInner](docs/CreateModerationResponseResultsInner.md)
- - [OpenaiOpenapiRb::CreateModerationResponseResultsInnerCategories](docs/CreateModerationResponseResultsInnerCategories.md)
- - [OpenaiOpenapiRb::CreateModerationResponseResultsInnerCategoryScores](docs/CreateModerationResponseResultsInnerCategoryScores.md)
- - [OpenaiOpenapiRb::CreateRunRequest](docs/CreateRunRequest.md)
- - [OpenaiOpenapiRb::CreateSpeechRequest](docs/CreateSpeechRequest.md)
- - [OpenaiOpenapiRb::CreateSpeechRequestModel](docs/CreateSpeechRequestModel.md)
- - [OpenaiOpenapiRb::CreateThreadAndRunRequest](docs/CreateThreadAndRunRequest.md)
- - [OpenaiOpenapiRb::CreateThreadAndRunRequestToolsInner](docs/CreateThreadAndRunRequestToolsInner.md)
- - [OpenaiOpenapiRb::CreateThreadRequest](docs/CreateThreadRequest.md)
- - [OpenaiOpenapiRb::CreateTranscriptionRequestModel](docs/CreateTranscriptionRequestModel.md)
- - [OpenaiOpenapiRb::CreateTranscriptionResponse](docs/CreateTranscriptionResponse.md)
- - [OpenaiOpenapiRb::CreateTranslationResponse](docs/CreateTranslationResponse.md)
- - [OpenaiOpenapiRb::DeleteAssistantFileResponse](docs/DeleteAssistantFileResponse.md)
- - [OpenaiOpenapiRb::DeleteAssistantResponse](docs/DeleteAssistantResponse.md)
- - [OpenaiOpenapiRb::DeleteFileResponse](docs/DeleteFileResponse.md)
- - [OpenaiOpenapiRb::DeleteMessageResponse](docs/DeleteMessageResponse.md)
- - [OpenaiOpenapiRb::DeleteModelResponse](docs/DeleteModelResponse.md)
- - [OpenaiOpenapiRb::DeleteThreadResponse](docs/DeleteThreadResponse.md)
- - [OpenaiOpenapiRb::Embedding](docs/Embedding.md)
- - [OpenaiOpenapiRb::Error](docs/Error.md)
- - [OpenaiOpenapiRb::ErrorResponse](docs/ErrorResponse.md)
- - [OpenaiOpenapiRb::FineTune](docs/FineTune.md)
- - [OpenaiOpenapiRb::FineTuneEvent](docs/FineTuneEvent.md)
- - [OpenaiOpenapiRb::FineTuneHyperparams](docs/FineTuneHyperparams.md)
- - [OpenaiOpenapiRb::FineTuningJob](docs/FineTuningJob.md)
- - [OpenaiOpenapiRb::FineTuningJobError](docs/FineTuningJobError.md)
- - [OpenaiOpenapiRb::FineTuningJobEvent](docs/FineTuningJobEvent.md)
- - [OpenaiOpenapiRb::FineTuningJobHyperparameters](docs/FineTuningJobHyperparameters.md)
- - [OpenaiOpenapiRb::FineTuningJobHyperparametersNEpochs](docs/FineTuningJobHyperparametersNEpochs.md)
- - [OpenaiOpenapiRb::FunctionObject](docs/FunctionObject.md)
- - [OpenaiOpenapiRb::Image](docs/Image.md)
- - [OpenaiOpenapiRb::ImagesResponse](docs/ImagesResponse.md)
- - [OpenaiOpenapiRb::ListAssistantFilesResponse](docs/ListAssistantFilesResponse.md)
- - [OpenaiOpenapiRb::ListAssistantsResponse](docs/ListAssistantsResponse.md)
- - [OpenaiOpenapiRb::ListFilesResponse](docs/ListFilesResponse.md)
- - [OpenaiOpenapiRb::ListFineTuneEventsResponse](docs/ListFineTuneEventsResponse.md)
- - [OpenaiOpenapiRb::ListFineTunesResponse](docs/ListFineTunesResponse.md)
- - [OpenaiOpenapiRb::ListFineTuningJobEventsResponse](docs/ListFineTuningJobEventsResponse.md)
- - [OpenaiOpenapiRb::ListMessageFilesResponse](docs/ListMessageFilesResponse.md)
- - [OpenaiOpenapiRb::ListMessagesResponse](docs/ListMessagesResponse.md)
- - [OpenaiOpenapiRb::ListModelsResponse](docs/ListModelsResponse.md)
- - [OpenaiOpenapiRb::ListPaginatedFineTuningJobsResponse](docs/ListPaginatedFineTuningJobsResponse.md)
- - [OpenaiOpenapiRb::ListRunStepsResponse](docs/ListRunStepsResponse.md)
- - [OpenaiOpenapiRb::ListRunsResponse](docs/ListRunsResponse.md)
- - [OpenaiOpenapiRb::ListThreadsResponse](docs/ListThreadsResponse.md)
- - [OpenaiOpenapiRb::MessageContentImageFileObject](docs/MessageContentImageFileObject.md)
- - [OpenaiOpenapiRb::MessageContentImageFileObjectImageFile](docs/MessageContentImageFileObjectImageFile.md)
- - [OpenaiOpenapiRb::MessageContentTextAnnotationsFileCitationObject](docs/MessageContentTextAnnotationsFileCitationObject.md)
- - [OpenaiOpenapiRb::MessageContentTextAnnotationsFileCitationObjectFileCitation](docs/MessageContentTextAnnotationsFileCitationObjectFileCitation.md)
- - [OpenaiOpenapiRb::MessageContentTextAnnotationsFilePathObject](docs/MessageContentTextAnnotationsFilePathObject.md)
- - [OpenaiOpenapiRb::MessageContentTextAnnotationsFilePathObjectFilePath](docs/MessageContentTextAnnotationsFilePathObjectFilePath.md)
- - [OpenaiOpenapiRb::MessageContentTextObject](docs/MessageContentTextObject.md)
- - [OpenaiOpenapiRb::MessageContentTextObjectText](docs/MessageContentTextObjectText.md)
- - [OpenaiOpenapiRb::MessageContentTextObjectTextAnnotationsInner](docs/MessageContentTextObjectTextAnnotationsInner.md)
- - [OpenaiOpenapiRb::MessageFileObject](docs/MessageFileObject.md)
- - [OpenaiOpenapiRb::MessageObject](docs/MessageObject.md)
- - [OpenaiOpenapiRb::MessageObjectContentInner](docs/MessageObjectContentInner.md)
- - [OpenaiOpenapiRb::Model](docs/Model.md)
- - [OpenaiOpenapiRb::ModifyAssistantRequest](docs/ModifyAssistantRequest.md)
- - [OpenaiOpenapiRb::ModifyMessageRequest](docs/ModifyMessageRequest.md)
- - [OpenaiOpenapiRb::ModifyRunRequest](docs/ModifyRunRequest.md)
- - [OpenaiOpenapiRb::ModifyThreadRequest](docs/ModifyThreadRequest.md)
- - [OpenaiOpenapiRb::OpenAIFile](docs/OpenAIFile.md)
- - [OpenaiOpenapiRb::RunObject](docs/RunObject.md)
- - [OpenaiOpenapiRb::RunObjectLastError](docs/RunObjectLastError.md)
- - [OpenaiOpenapiRb::RunObjectRequiredAction](docs/RunObjectRequiredAction.md)
- - [OpenaiOpenapiRb::RunObjectRequiredActionSubmitToolOutputs](docs/RunObjectRequiredActionSubmitToolOutputs.md)
- - [OpenaiOpenapiRb::RunStepDetailsMessageCreationObject](docs/RunStepDetailsMessageCreationObject.md)
- - [OpenaiOpenapiRb::RunStepDetailsMessageCreationObjectMessageCreation](docs/RunStepDetailsMessageCreationObjectMessageCreation.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsCodeObject](docs/RunStepDetailsToolCallsCodeObject.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsCodeObjectCodeInterpreter](docs/RunStepDetailsToolCallsCodeObjectCodeInterpreter.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner](docs/RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsCodeOutputImageObject](docs/RunStepDetailsToolCallsCodeOutputImageObject.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsCodeOutputImageObjectImage](docs/RunStepDetailsToolCallsCodeOutputImageObjectImage.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsCodeOutputLogsObject](docs/RunStepDetailsToolCallsCodeOutputLogsObject.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsFunctionObject](docs/RunStepDetailsToolCallsFunctionObject.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsFunctionObjectFunction](docs/RunStepDetailsToolCallsFunctionObjectFunction.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsObject](docs/RunStepDetailsToolCallsObject.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsObjectToolCallsInner](docs/RunStepDetailsToolCallsObjectToolCallsInner.md)
- - [OpenaiOpenapiRb::RunStepDetailsToolCallsRetrievalObject](docs/RunStepDetailsToolCallsRetrievalObject.md)
- - [OpenaiOpenapiRb::RunStepObject](docs/RunStepObject.md)
- - [OpenaiOpenapiRb::RunStepObjectLastError](docs/RunStepObjectLastError.md)
- - [OpenaiOpenapiRb::RunStepObjectStepDetails](docs/RunStepObjectStepDetails.md)
- - [OpenaiOpenapiRb::RunToolCallObject](docs/RunToolCallObject.md)
- - [OpenaiOpenapiRb::RunToolCallObjectFunction](docs/RunToolCallObjectFunction.md)
- - [OpenaiOpenapiRb::SubmitToolOutputsRunRequest](docs/SubmitToolOutputsRunRequest.md)
- - [OpenaiOpenapiRb::SubmitToolOutputsRunRequestToolOutputsInner](docs/SubmitToolOutputsRunRequestToolOutputsInner.md)
- - [OpenaiOpenapiRb::ThreadObject](docs/ThreadObject.md)
+ - [OpenAiApi::AssistantFileObject](docs/AssistantFileObject.md)
+ - [OpenAiApi::AssistantObject](docs/AssistantObject.md)
+ - [OpenAiApi::AssistantObjectToolsInner](docs/AssistantObjectToolsInner.md)
+ - [OpenAiApi::AssistantToolsCode](docs/AssistantToolsCode.md)
+ - [OpenAiApi::AssistantToolsFunction](docs/AssistantToolsFunction.md)
+ - [OpenAiApi::AssistantToolsRetrieval](docs/AssistantToolsRetrieval.md)
+ - [OpenAiApi::ChatCompletionFunctionCallOption](docs/ChatCompletionFunctionCallOption.md)
+ - [OpenAiApi::ChatCompletionFunctions](docs/ChatCompletionFunctions.md)
+ - [OpenAiApi::ChatCompletionMessageToolCall](docs/ChatCompletionMessageToolCall.md)
+ - [OpenAiApi::ChatCompletionMessageToolCallChunk](docs/ChatCompletionMessageToolCallChunk.md)
+ - [OpenAiApi::ChatCompletionMessageToolCallChunkFunction](docs/ChatCompletionMessageToolCallChunkFunction.md)
+ - [OpenAiApi::ChatCompletionMessageToolCallFunction](docs/ChatCompletionMessageToolCallFunction.md)
+ - [OpenAiApi::ChatCompletionNamedToolChoice](docs/ChatCompletionNamedToolChoice.md)
+ - [OpenAiApi::ChatCompletionNamedToolChoiceFunction](docs/ChatCompletionNamedToolChoiceFunction.md)
+ - [OpenAiApi::ChatCompletionRequestAssistantMessage](docs/ChatCompletionRequestAssistantMessage.md)
+ - [OpenAiApi::ChatCompletionRequestAssistantMessageFunctionCall](docs/ChatCompletionRequestAssistantMessageFunctionCall.md)
+ - [OpenAiApi::ChatCompletionRequestFunctionMessage](docs/ChatCompletionRequestFunctionMessage.md)
+ - [OpenAiApi::ChatCompletionRequestMessage](docs/ChatCompletionRequestMessage.md)
+ - [OpenAiApi::ChatCompletionRequestMessageContentPart](docs/ChatCompletionRequestMessageContentPart.md)
+ - [OpenAiApi::ChatCompletionRequestMessageContentPartImage](docs/ChatCompletionRequestMessageContentPartImage.md)
+ - [OpenAiApi::ChatCompletionRequestMessageContentPartImageImageUrl](docs/ChatCompletionRequestMessageContentPartImageImageUrl.md)
+ - [OpenAiApi::ChatCompletionRequestMessageContentPartText](docs/ChatCompletionRequestMessageContentPartText.md)
+ - [OpenAiApi::ChatCompletionRequestSystemMessage](docs/ChatCompletionRequestSystemMessage.md)
+ - [OpenAiApi::ChatCompletionRequestToolMessage](docs/ChatCompletionRequestToolMessage.md)
+ - [OpenAiApi::ChatCompletionRequestUserMessage](docs/ChatCompletionRequestUserMessage.md)
+ - [OpenAiApi::ChatCompletionRequestUserMessageContent](docs/ChatCompletionRequestUserMessageContent.md)
+ - [OpenAiApi::ChatCompletionResponseMessage](docs/ChatCompletionResponseMessage.md)
+ - [OpenAiApi::ChatCompletionRole](docs/ChatCompletionRole.md)
+ - [OpenAiApi::ChatCompletionStreamResponseDelta](docs/ChatCompletionStreamResponseDelta.md)
+ - [OpenAiApi::ChatCompletionStreamResponseDeltaFunctionCall](docs/ChatCompletionStreamResponseDeltaFunctionCall.md)
+ - [OpenAiApi::ChatCompletionTool](docs/ChatCompletionTool.md)
+ - [OpenAiApi::ChatCompletionToolChoiceOption](docs/ChatCompletionToolChoiceOption.md)
+ - [OpenAiApi::CompletionUsage](docs/CompletionUsage.md)
+ - [OpenAiApi::CreateAssistantFileRequest](docs/CreateAssistantFileRequest.md)
+ - [OpenAiApi::CreateAssistantRequest](docs/CreateAssistantRequest.md)
+ - [OpenAiApi::CreateChatCompletionFunctionResponse](docs/CreateChatCompletionFunctionResponse.md)
+ - [OpenAiApi::CreateChatCompletionFunctionResponseChoicesInner](docs/CreateChatCompletionFunctionResponseChoicesInner.md)
+ - [OpenAiApi::CreateChatCompletionRequest](docs/CreateChatCompletionRequest.md)
+ - [OpenAiApi::CreateChatCompletionRequestFunctionCall](docs/CreateChatCompletionRequestFunctionCall.md)
+ - [OpenAiApi::CreateChatCompletionRequestModel](docs/CreateChatCompletionRequestModel.md)
+ - [OpenAiApi::CreateChatCompletionRequestResponseFormat](docs/CreateChatCompletionRequestResponseFormat.md)
+ - [OpenAiApi::CreateChatCompletionRequestStop](docs/CreateChatCompletionRequestStop.md)
+ - [OpenAiApi::CreateChatCompletionResponse](docs/CreateChatCompletionResponse.md)
+ - [OpenAiApi::CreateChatCompletionResponseChoicesInner](docs/CreateChatCompletionResponseChoicesInner.md)
+ - [OpenAiApi::CreateChatCompletionStreamResponse](docs/CreateChatCompletionStreamResponse.md)
+ - [OpenAiApi::CreateChatCompletionStreamResponseChoicesInner](docs/CreateChatCompletionStreamResponseChoicesInner.md)
+ - [OpenAiApi::CreateCompletionRequest](docs/CreateCompletionRequest.md)
+ - [OpenAiApi::CreateCompletionRequestModel](docs/CreateCompletionRequestModel.md)
+ - [OpenAiApi::CreateCompletionRequestPrompt](docs/CreateCompletionRequestPrompt.md)
+ - [OpenAiApi::CreateCompletionRequestStop](docs/CreateCompletionRequestStop.md)
+ - [OpenAiApi::CreateCompletionResponse](docs/CreateCompletionResponse.md)
+ - [OpenAiApi::CreateCompletionResponseChoicesInner](docs/CreateCompletionResponseChoicesInner.md)
+ - [OpenAiApi::CreateCompletionResponseChoicesInnerLogprobs](docs/CreateCompletionResponseChoicesInnerLogprobs.md)
+ - [OpenAiApi::CreateEditRequest](docs/CreateEditRequest.md)
+ - [OpenAiApi::CreateEditRequestModel](docs/CreateEditRequestModel.md)
+ - [OpenAiApi::CreateEditResponse](docs/CreateEditResponse.md)
+ - [OpenAiApi::CreateEditResponseChoicesInner](docs/CreateEditResponseChoicesInner.md)
+ - [OpenAiApi::CreateEmbeddingRequest](docs/CreateEmbeddingRequest.md)
+ - [OpenAiApi::CreateEmbeddingRequestInput](docs/CreateEmbeddingRequestInput.md)
+ - [OpenAiApi::CreateEmbeddingRequestModel](docs/CreateEmbeddingRequestModel.md)
+ - [OpenAiApi::CreateEmbeddingResponse](docs/CreateEmbeddingResponse.md)
+ - [OpenAiApi::CreateEmbeddingResponseUsage](docs/CreateEmbeddingResponseUsage.md)
+ - [OpenAiApi::CreateFineTuneRequest](docs/CreateFineTuneRequest.md)
+ - [OpenAiApi::CreateFineTuneRequestHyperparameters](docs/CreateFineTuneRequestHyperparameters.md)
+ - [OpenAiApi::CreateFineTuneRequestHyperparametersNEpochs](docs/CreateFineTuneRequestHyperparametersNEpochs.md)
+ - [OpenAiApi::CreateFineTuneRequestModel](docs/CreateFineTuneRequestModel.md)
+ - [OpenAiApi::CreateFineTuningJobRequest](docs/CreateFineTuningJobRequest.md)
+ - [OpenAiApi::CreateFineTuningJobRequestHyperparameters](docs/CreateFineTuningJobRequestHyperparameters.md)
+ - [OpenAiApi::CreateFineTuningJobRequestHyperparametersBatchSize](docs/CreateFineTuningJobRequestHyperparametersBatchSize.md)
+ - [OpenAiApi::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier](docs/CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.md)
+ - [OpenAiApi::CreateFineTuningJobRequestHyperparametersNEpochs](docs/CreateFineTuningJobRequestHyperparametersNEpochs.md)
+ - [OpenAiApi::CreateFineTuningJobRequestModel](docs/CreateFineTuningJobRequestModel.md)
+ - [OpenAiApi::CreateImageEditRequestModel](docs/CreateImageEditRequestModel.md)
+ - [OpenAiApi::CreateImageRequest](docs/CreateImageRequest.md)
+ - [OpenAiApi::CreateImageRequestModel](docs/CreateImageRequestModel.md)
+ - [OpenAiApi::CreateMessageRequest](docs/CreateMessageRequest.md)
+ - [OpenAiApi::CreateModerationRequest](docs/CreateModerationRequest.md)
+ - [OpenAiApi::CreateModerationRequestInput](docs/CreateModerationRequestInput.md)
+ - [OpenAiApi::CreateModerationRequestModel](docs/CreateModerationRequestModel.md)
+ - [OpenAiApi::CreateModerationResponse](docs/CreateModerationResponse.md)
+ - [OpenAiApi::CreateModerationResponseResultsInner](docs/CreateModerationResponseResultsInner.md)
+ - [OpenAiApi::CreateModerationResponseResultsInnerCategories](docs/CreateModerationResponseResultsInnerCategories.md)
+ - [OpenAiApi::CreateModerationResponseResultsInnerCategoryScores](docs/CreateModerationResponseResultsInnerCategoryScores.md)
+ - [OpenAiApi::CreateRunRequest](docs/CreateRunRequest.md)
+ - [OpenAiApi::CreateSpeechRequest](docs/CreateSpeechRequest.md)
+ - [OpenAiApi::CreateSpeechRequestModel](docs/CreateSpeechRequestModel.md)
+ - [OpenAiApi::CreateThreadAndRunRequest](docs/CreateThreadAndRunRequest.md)
+ - [OpenAiApi::CreateThreadAndRunRequestToolsInner](docs/CreateThreadAndRunRequestToolsInner.md)
+ - [OpenAiApi::CreateThreadRequest](docs/CreateThreadRequest.md)
+ - [OpenAiApi::CreateTranscriptionRequestModel](docs/CreateTranscriptionRequestModel.md)
+ - [OpenAiApi::CreateTranscriptionResponse](docs/CreateTranscriptionResponse.md)
+ - [OpenAiApi::CreateTranslationResponse](docs/CreateTranslationResponse.md)
+ - [OpenAiApi::DeleteAssistantFileResponse](docs/DeleteAssistantFileResponse.md)
+ - [OpenAiApi::DeleteAssistantResponse](docs/DeleteAssistantResponse.md)
+ - [OpenAiApi::DeleteFileResponse](docs/DeleteFileResponse.md)
+ - [OpenAiApi::DeleteMessageResponse](docs/DeleteMessageResponse.md)
+ - [OpenAiApi::DeleteModelResponse](docs/DeleteModelResponse.md)
+ - [OpenAiApi::DeleteThreadResponse](docs/DeleteThreadResponse.md)
+ - [OpenAiApi::Embedding](docs/Embedding.md)
+ - [OpenAiApi::Error](docs/Error.md)
+ - [OpenAiApi::ErrorResponse](docs/ErrorResponse.md)
+ - [OpenAiApi::FineTune](docs/FineTune.md)
+ - [OpenAiApi::FineTuneEvent](docs/FineTuneEvent.md)
+ - [OpenAiApi::FineTuneHyperparams](docs/FineTuneHyperparams.md)
+ - [OpenAiApi::FineTuningJob](docs/FineTuningJob.md)
+ - [OpenAiApi::FineTuningJobError](docs/FineTuningJobError.md)
+ - [OpenAiApi::FineTuningJobEvent](docs/FineTuningJobEvent.md)
+ - [OpenAiApi::FineTuningJobHyperparameters](docs/FineTuningJobHyperparameters.md)
+ - [OpenAiApi::FineTuningJobHyperparametersNEpochs](docs/FineTuningJobHyperparametersNEpochs.md)
+ - [OpenAiApi::FunctionObject](docs/FunctionObject.md)
+ - [OpenAiApi::Image](docs/Image.md)
+ - [OpenAiApi::ImagesResponse](docs/ImagesResponse.md)
+ - [OpenAiApi::ListAssistantFilesResponse](docs/ListAssistantFilesResponse.md)
+ - [OpenAiApi::ListAssistantsResponse](docs/ListAssistantsResponse.md)
+ - [OpenAiApi::ListFilesResponse](docs/ListFilesResponse.md)
+ - [OpenAiApi::ListFineTuneEventsResponse](docs/ListFineTuneEventsResponse.md)
+ - [OpenAiApi::ListFineTunesResponse](docs/ListFineTunesResponse.md)
+ - [OpenAiApi::ListFineTuningJobEventsResponse](docs/ListFineTuningJobEventsResponse.md)
+ - [OpenAiApi::ListMessageFilesResponse](docs/ListMessageFilesResponse.md)
+ - [OpenAiApi::ListMessagesResponse](docs/ListMessagesResponse.md)
+ - [OpenAiApi::ListModelsResponse](docs/ListModelsResponse.md)
+ - [OpenAiApi::ListPaginatedFineTuningJobsResponse](docs/ListPaginatedFineTuningJobsResponse.md)
+ - [OpenAiApi::ListRunStepsResponse](docs/ListRunStepsResponse.md)
+ - [OpenAiApi::ListRunsResponse](docs/ListRunsResponse.md)
+ - [OpenAiApi::ListThreadsResponse](docs/ListThreadsResponse.md)
+ - [OpenAiApi::MessageContentImageFileObject](docs/MessageContentImageFileObject.md)
+ - [OpenAiApi::MessageContentImageFileObjectImageFile](docs/MessageContentImageFileObjectImageFile.md)
+ - [OpenAiApi::MessageContentTextAnnotationsFileCitationObject](docs/MessageContentTextAnnotationsFileCitationObject.md)
+ - [OpenAiApi::MessageContentTextAnnotationsFileCitationObjectFileCitation](docs/MessageContentTextAnnotationsFileCitationObjectFileCitation.md)
+ - [OpenAiApi::MessageContentTextAnnotationsFilePathObject](docs/MessageContentTextAnnotationsFilePathObject.md)
+ - [OpenAiApi::MessageContentTextAnnotationsFilePathObjectFilePath](docs/MessageContentTextAnnotationsFilePathObjectFilePath.md)
+ - [OpenAiApi::MessageContentTextObject](docs/MessageContentTextObject.md)
+ - [OpenAiApi::MessageContentTextObjectText](docs/MessageContentTextObjectText.md)
+ - [OpenAiApi::MessageContentTextObjectTextAnnotationsInner](docs/MessageContentTextObjectTextAnnotationsInner.md)
+ - [OpenAiApi::MessageFileObject](docs/MessageFileObject.md)
+ - [OpenAiApi::MessageObject](docs/MessageObject.md)
+ - [OpenAiApi::MessageObjectContentInner](docs/MessageObjectContentInner.md)
+ - [OpenAiApi::Model](docs/Model.md)
+ - [OpenAiApi::ModifyAssistantRequest](docs/ModifyAssistantRequest.md)
+ - [OpenAiApi::ModifyMessageRequest](docs/ModifyMessageRequest.md)
+ - [OpenAiApi::ModifyRunRequest](docs/ModifyRunRequest.md)
+ - [OpenAiApi::ModifyThreadRequest](docs/ModifyThreadRequest.md)
+ - [OpenAiApi::OpenAIFile](docs/OpenAIFile.md)
+ - [OpenAiApi::RunObject](docs/RunObject.md)
+ - [OpenAiApi::RunObjectLastError](docs/RunObjectLastError.md)
+ - [OpenAiApi::RunObjectRequiredAction](docs/RunObjectRequiredAction.md)
+ - [OpenAiApi::RunObjectRequiredActionSubmitToolOutputs](docs/RunObjectRequiredActionSubmitToolOutputs.md)
+ - [OpenAiApi::RunStepDetailsMessageCreationObject](docs/RunStepDetailsMessageCreationObject.md)
+ - [OpenAiApi::RunStepDetailsMessageCreationObjectMessageCreation](docs/RunStepDetailsMessageCreationObjectMessageCreation.md)
+ - [OpenAiApi::RunStepDetailsToolCallsCodeObject](docs/RunStepDetailsToolCallsCodeObject.md)
+ - [OpenAiApi::RunStepDetailsToolCallsCodeObjectCodeInterpreter](docs/RunStepDetailsToolCallsCodeObjectCodeInterpreter.md)
+ - [OpenAiApi::RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner](docs/RunStepDetailsToolCallsCodeObjectCodeInterpreterOutputsInner.md)
+ - [OpenAiApi::RunStepDetailsToolCallsCodeOutputImageObject](docs/RunStepDetailsToolCallsCodeOutputImageObject.md)
+ - [OpenAiApi::RunStepDetailsToolCallsCodeOutputImageObjectImage](docs/RunStepDetailsToolCallsCodeOutputImageObjectImage.md)
+ - [OpenAiApi::RunStepDetailsToolCallsCodeOutputLogsObject](docs/RunStepDetailsToolCallsCodeOutputLogsObject.md)
+ - [OpenAiApi::RunStepDetailsToolCallsFunctionObject](docs/RunStepDetailsToolCallsFunctionObject.md)
+ - [OpenAiApi::RunStepDetailsToolCallsFunctionObjectFunction](docs/RunStepDetailsToolCallsFunctionObjectFunction.md)
+ - [OpenAiApi::RunStepDetailsToolCallsObject](docs/RunStepDetailsToolCallsObject.md)
+ - [OpenAiApi::RunStepDetailsToolCallsObjectToolCallsInner](docs/RunStepDetailsToolCallsObjectToolCallsInner.md)
+ - [OpenAiApi::RunStepDetailsToolCallsRetrievalObject](docs/RunStepDetailsToolCallsRetrievalObject.md)
+ - [OpenAiApi::RunStepObject](docs/RunStepObject.md)
+ - [OpenAiApi::RunStepObjectLastError](docs/RunStepObjectLastError.md)
+ - [OpenAiApi::RunStepObjectStepDetails](docs/RunStepObjectStepDetails.md)
+ - [OpenAiApi::RunToolCallObject](docs/RunToolCallObject.md)
+ - [OpenAiApi::RunToolCallObjectFunction](docs/RunToolCallObjectFunction.md)
+ - [OpenAiApi::SubmitToolOutputsRunRequest](docs/SubmitToolOutputsRunRequest.md)
+ - [OpenAiApi::SubmitToolOutputsRunRequestToolOutputsInner](docs/SubmitToolOutputsRunRequestToolOutputsInner.md)
+ - [OpenAiApi::ThreadObject](docs/ThreadObject.md)
 
 
 ## Documentation for Authorization

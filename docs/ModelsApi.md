@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ModelsApi
+# OpenAiApi::ModelsApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -21,19 +21,19 @@ Delete a fine-tuned model. You must have the Owner role in your organization to 
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::ModelsApi.new
+api_instance = OpenAiApi::ModelsApi.new
 model = 'ft:gpt-3.5-turbo:acemeco:suffix:abc123' # String | The model to delete
 
 begin
   # Delete a fine-tuned model. You must have the Owner role in your organization to delete a model.
   result = api_instance.delete_model(model)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ModelsApi->delete_model: #{e}"
 end
 ```
@@ -51,7 +51,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeleteModelResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ModelsApi->delete_model_with_http_info: #{e}"
 end
 ```
@@ -88,18 +88,18 @@ Lists the currently available models, and provides basic information about each 
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::ModelsApi.new
+api_instance = OpenAiApi::ModelsApi.new
 
 begin
   # Lists the currently available models, and provides basic information about each one such as the owner and availability.
   result = api_instance.list_models
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ModelsApi->list_models: #{e}"
 end
 ```
@@ -117,7 +117,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListModelsResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ModelsApi->list_models_with_http_info: #{e}"
 end
 ```
@@ -152,19 +152,19 @@ Retrieves a model instance, providing basic information about the model such as 
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::ModelsApi.new
+api_instance = OpenAiApi::ModelsApi.new
 model = 'gpt-3.5-turbo' # String | The ID of the model to use for this request
 
 begin
   # Retrieves a model instance, providing basic information about the model such as the owner and permissioning.
   result = api_instance.retrieve_model(model)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ModelsApi->retrieve_model: #{e}"
 end
 ```
@@ -182,7 +182,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Model>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ModelsApi->retrieve_model_with_http_info: #{e}"
 end
 ```

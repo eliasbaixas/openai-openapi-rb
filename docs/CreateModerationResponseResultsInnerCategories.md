@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateModerationResponseResultsInnerCategories
+# OpenAiApi::CreateModerationResponseResultsInnerCategories
 
 ## Properties
 
@@ -21,7 +21,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateModerationResponseResultsInnerCategories.new(
+instance = OpenAiApi::CreateModerationResponseResultsInnerCategories.new(
   hate: null,
   hate_threatening: null,
   harassment: null,

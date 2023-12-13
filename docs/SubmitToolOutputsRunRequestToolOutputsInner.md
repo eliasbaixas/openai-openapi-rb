@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::SubmitToolOutputsRunRequestToolOutputsInner
+# OpenAiApi::SubmitToolOutputsRunRequestToolOutputsInner
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::SubmitToolOutputsRunRequestToolOutputsInner.new(
+instance = OpenAiApi::SubmitToolOutputsRunRequestToolOutputsInner.new(
   tool_call_id: null,
   output: null
 )

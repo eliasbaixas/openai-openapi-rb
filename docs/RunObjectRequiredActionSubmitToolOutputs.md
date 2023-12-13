@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::RunObjectRequiredActionSubmitToolOutputs
+# OpenAiApi::RunObjectRequiredActionSubmitToolOutputs
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::RunObjectRequiredActionSubmitToolOutputs.new(
+instance = OpenAiApi::RunObjectRequiredActionSubmitToolOutputs.new(
   tool_calls: null
 )
 ```

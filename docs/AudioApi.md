@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::AudioApi
+# OpenAiApi::AudioApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -21,19 +21,19 @@ Generates audio from the input text.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::AudioApi.new
-create_speech_request = OpenaiOpenapiRb::CreateSpeechRequest.new({model: OpenaiOpenapiRb::CreateSpeechRequestModel.new, input: 'input_example', voice: 'alloy'}) # CreateSpeechRequest | 
+api_instance = OpenAiApi::AudioApi.new
+create_speech_request = OpenAiApi::CreateSpeechRequest.new({model: OpenAiApi::CreateSpeechRequestModel.new, input: 'input_example', voice: 'alloy'}) # CreateSpeechRequest | 
 
 begin
   # Generates audio from the input text.
   result = api_instance.create_speech(create_speech_request)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling AudioApi->create_speech: #{e}"
 end
 ```
@@ -51,7 +51,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => File
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling AudioApi->create_speech_with_http_info: #{e}"
 end
 ```
@@ -88,14 +88,14 @@ Transcribes audio into the input language.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::AudioApi.new
+api_instance = OpenAiApi::AudioApi.new
 file = File.new('/path/to/some/file') # File | The audio file object (not file name) to transcribe, in one of these formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm. 
-model = OpenaiOpenapiRb::CreateTranscriptionRequestModel.new # CreateTranscriptionRequestModel | 
+model = OpenAiApi::CreateTranscriptionRequestModel.new # CreateTranscriptionRequestModel | 
 opts = {
   language: 'language_example', # String | The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency. 
   prompt: 'prompt_example', # String | An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should match the audio language. 
@@ -107,7 +107,7 @@ begin
   # Transcribes audio into the input language.
   result = api_instance.create_transcription(file, model, opts)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling AudioApi->create_transcription: #{e}"
 end
 ```
@@ -125,7 +125,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTranscriptionResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling AudioApi->create_transcription_with_http_info: #{e}"
 end
 ```
@@ -167,14 +167,14 @@ Translates audio into English.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::AudioApi.new
+api_instance = OpenAiApi::AudioApi.new
 file = File.new('/path/to/some/file') # File | The audio file object (not file name) translate, in one of these formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm. 
-model = OpenaiOpenapiRb::CreateTranscriptionRequestModel.new # CreateTranscriptionRequestModel | 
+model = OpenAiApi::CreateTranscriptionRequestModel.new # CreateTranscriptionRequestModel | 
 opts = {
   prompt: 'prompt_example', # String | An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should be in English. 
   response_format: 'response_format_example', # String | The format of the transcript output, in one of these options: `json`, `text`, `srt`, `verbose_json`, or `vtt`. 
@@ -185,7 +185,7 @@ begin
   # Translates audio into English.
   result = api_instance.create_translation(file, model, opts)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling AudioApi->create_translation: #{e}"
 end
 ```
@@ -203,7 +203,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTranslationResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling AudioApi->create_translation_with_http_info: #{e}"
 end
 ```

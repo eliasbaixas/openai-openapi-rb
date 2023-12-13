@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersNEpochs
+# OpenAiApi::CreateFineTuningJobRequestHyperparametersNEpochs
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersNEpochs.openapi_one_of
+OpenAiApi::CreateFineTuningJobRequestHyperparametersNEpochs.openapi_one_of
 # =>
 # [
 #   :'Integer',
@@ -28,10 +28,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersNEpochs.build(data)
+OpenAiApi::CreateFineTuningJobRequestHyperparametersNEpochs.build(data)
 # => #<Integer:0x00007fdd4aab02a0>
 
-OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersNEpochs.build(data_that_doesnt_match)
+OpenAiApi::CreateFineTuningJobRequestHyperparametersNEpochs.build(data_that_doesnt_match)
 # => nil
 ```
 

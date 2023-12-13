@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::DeleteModelResponse
+# OpenAiApi::DeleteModelResponse
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::DeleteModelResponse.new(
+instance = OpenAiApi::DeleteModelResponse.new(
   id: null,
   deleted: null,
   object: null

@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier
+# OpenAiApi::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.openapi_one_of
+OpenAiApi::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.openapi_one_of
 # =>
 # [
 #   :'Float',
@@ -28,10 +28,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.build(data)
+OpenAiApi::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.build(data)
 # => #<Float:0x00007fdd4aab02a0>
 
-OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.build(data_that_doesnt_match)
+OpenAiApi::CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.build(data_that_doesnt_match)
 # => nil
 ```
 

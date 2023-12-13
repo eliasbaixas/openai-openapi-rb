@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateTranslationResponse
+# OpenAiApi::CreateTranslationResponse
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateTranslationResponse.new(
+instance = OpenAiApi::CreateTranslationResponse.new(
   text: null
 )
 ```

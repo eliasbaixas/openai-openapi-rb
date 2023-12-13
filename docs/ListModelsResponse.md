@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ListModelsResponse
+# OpenAiApi::ListModelsResponse
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::ListModelsResponse.new(
+instance = OpenAiApi::ListModelsResponse.new(
   object: null,
   data: null
 )

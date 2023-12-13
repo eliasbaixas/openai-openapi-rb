@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::RunObjectLastError
+# OpenAiApi::RunObjectLastError
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::RunObjectLastError.new(
+instance = OpenAiApi::RunObjectLastError.new(
   code: null,
   message: null
 )

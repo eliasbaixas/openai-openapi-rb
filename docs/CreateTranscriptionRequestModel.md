@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateTranscriptionRequestModel
+# OpenAiApi::CreateTranscriptionRequestModel
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateTranscriptionRequestModel.new()
+instance = OpenAiApi::CreateTranscriptionRequestModel.new()
 ```
 

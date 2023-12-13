@@ -17,7 +17,7 @@ require "openai-openapi-rb/version"
 
 Gem::Specification.new do |s|
   s.name        = "openai-openapi-rb"
-  s.version     = OpenaiOpenapiRb::VERSION
+  s.version     = OpenAiApi::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["OpenAPI-Generator"]
   s.email       = [""]

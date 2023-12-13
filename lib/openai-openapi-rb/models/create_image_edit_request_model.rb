@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenaiOpenapiRb
+module OpenAiApi
   # The model to use for image generation. Only `dall-e-2` is supported at this time.
   module CreateImageEditRequestModel
     class << self
@@ -80,7 +80,7 @@ module OpenaiOpenapiRb
             return data.each_with_object({}) { |(k, v), hsh| hsh[k] = find_and_cast_into_type(sub_type, v) }
           end
         else # model
-          const = OpenaiOpenapiRb.const_get(klass)
+          const = OpenAiApi.const_get(klass)
           if const
             if const.respond_to?(:openapi_any_of) # nested anyOf model
               model = const.build(data)

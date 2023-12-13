@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::MessageContentTextAnnotationsFilePathObjectFilePath
+# OpenAiApi::MessageContentTextAnnotationsFilePathObjectFilePath
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::MessageContentTextAnnotationsFilePathObjectFilePath.new(
+instance = OpenAiApi::MessageContentTextAnnotationsFilePathObjectFilePath.new(
   file_id: null
 )
 ```

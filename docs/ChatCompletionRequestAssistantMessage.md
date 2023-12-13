@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ChatCompletionRequestAssistantMessage
+# OpenAiApi::ChatCompletionRequestAssistantMessage
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::ChatCompletionRequestAssistantMessage.new(
+instance = OpenAiApi::ChatCompletionRequestAssistantMessage.new(
   content: null,
   role: null,
   name: null,

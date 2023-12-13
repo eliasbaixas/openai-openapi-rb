@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateChatCompletionRequest
+# OpenAiApi::CreateChatCompletionRequest
 
 ## Properties
 
@@ -28,7 +28,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateChatCompletionRequest.new(
+instance = OpenAiApi::CreateChatCompletionRequest.new(
   messages: null,
   model: null,
   frequency_penalty: null,

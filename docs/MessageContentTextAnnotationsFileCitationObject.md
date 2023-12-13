@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::MessageContentTextAnnotationsFileCitationObject
+# OpenAiApi::MessageContentTextAnnotationsFileCitationObject
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::MessageContentTextAnnotationsFileCitationObject.new(
+instance = OpenAiApi::MessageContentTextAnnotationsFileCitationObject.new(
   type: null,
   text: null,
   file_citation: null,

@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ModifyThreadRequest
+# OpenAiApi::ModifyThreadRequest
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::ModifyThreadRequest.new(
+instance = OpenAiApi::ModifyThreadRequest.new(
   metadata: null
 )
 ```

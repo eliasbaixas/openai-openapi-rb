@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::FineTuneEvent
+# OpenAiApi::FineTuneEvent
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::FineTuneEvent.new(
+instance = OpenAiApi::FineTuneEvent.new(
   created_at: null,
   level: null,
   message: null,

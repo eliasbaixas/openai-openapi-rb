@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateEditRequestModel
+# OpenAiApi::CreateEditRequestModel
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateEditRequestModel.new()
+instance = OpenAiApi::CreateEditRequestModel.new()
 ```
 

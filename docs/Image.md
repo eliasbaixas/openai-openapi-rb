@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::Image
+# OpenAiApi::Image
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::Image.new(
+instance = OpenAiApi::Image.new(
   b64_json: null,
   url: null,
   revised_prompt: null

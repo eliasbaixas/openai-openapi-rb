@@ -18,7 +18,7 @@ require 'time'
 require 'typhoeus'
 
 
-module OpenaiOpenapiRb
+module OpenAiApi
   class ApiClient
     # The Configuration object holding settings to be used in the API client.
     attr_accessor :config
@@ -278,7 +278,7 @@ module OpenaiOpenapiRb
         end
       else
         # models (e.g. Pet) or oneOf
-        klass = OpenaiOpenapiRb.const_get(return_type)
+        klass = OpenAiApi.const_get(return_type)
         klass.respond_to?(:openapi_one_of) ? klass.build(data) : klass.build_from_hash(data)
       end
     end

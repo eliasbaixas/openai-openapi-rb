@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateEditResponseChoicesInner
+# OpenAiApi::CreateEditResponseChoicesInner
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateEditResponseChoicesInner.new(
+instance = OpenAiApi::CreateEditResponseChoicesInner.new(
   finish_reason: null,
   index: null,
   text: null

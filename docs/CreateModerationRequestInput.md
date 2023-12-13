@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateModerationRequestInput
+# OpenAiApi::CreateModerationRequestInput
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::CreateModerationRequestInput.openapi_one_of
+OpenAiApi::CreateModerationRequestInput.openapi_one_of
 # =>
 # [
 #   :'Array<String>',
@@ -28,10 +28,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::CreateModerationRequestInput.build(data)
+OpenAiApi::CreateModerationRequestInput.build(data)
 # => #<Array<String>:0x00007fdd4aab02a0>
 
-OpenaiOpenapiRb::CreateModerationRequestInput.build(data_that_doesnt_match)
+OpenAiApi::CreateModerationRequestInput.build(data_that_doesnt_match)
 # => nil
 ```
 

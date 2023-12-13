@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ChatCompletionRequestUserMessageContent
+# OpenAiApi::ChatCompletionRequestUserMessageContent
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::ChatCompletionRequestUserMessageContent.openapi_one_of
+OpenAiApi::ChatCompletionRequestUserMessageContent.openapi_one_of
 # =>
 # [
 #   :'Array<ChatCompletionRequestMessageContentPart>',
@@ -28,10 +28,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenaiOpenapiRb::ChatCompletionRequestUserMessageContent.build(data)
+OpenAiApi::ChatCompletionRequestUserMessageContent.build(data)
 # => #<Array<ChatCompletionRequestMessageContentPart>:0x00007fdd4aab02a0>
 
-OpenaiOpenapiRb::ChatCompletionRequestUserMessageContent.build(data_that_doesnt_match)
+OpenAiApi::ChatCompletionRequestUserMessageContent.build(data_that_doesnt_match)
 # => nil
 ```
 

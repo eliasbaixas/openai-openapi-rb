@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ListPaginatedFineTuningJobsResponse
+# OpenAiApi::ListPaginatedFineTuningJobsResponse
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::ListPaginatedFineTuningJobsResponse.new(
+instance = OpenAiApi::ListPaginatedFineTuningJobsResponse.new(
   data: null,
   has_more: null,
   object: null

@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ListFineTuningJobEventsResponse
+# OpenAiApi::ListFineTuningJobEventsResponse
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::ListFineTuningJobEventsResponse.new(
+instance = OpenAiApi::ListFineTuningJobEventsResponse.new(
   data: null,
   object: null
 )

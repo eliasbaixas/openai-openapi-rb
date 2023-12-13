@@ -12,14 +12,14 @@ OpenAPI Generator version: 7.1.0
 
 require 'spec_helper'
 
-describe OpenaiOpenapiRb::Configuration do
-  let(:config) { OpenaiOpenapiRb::Configuration.default }
+describe OpenAiApi::Configuration do
+  let(:config) { OpenAiApi::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     # require 'URI'
     # uri = URI.parse("https://api.openai.com/v1")
-    # OpenaiOpenapiRb.configure do |c|
+    # OpenAiApi.configure do |c|
     #   c.host = uri.host
     #   c.base_path = uri.path
     # end

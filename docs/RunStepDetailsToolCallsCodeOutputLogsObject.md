@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::RunStepDetailsToolCallsCodeOutputLogsObject
+# OpenAiApi::RunStepDetailsToolCallsCodeOutputLogsObject
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::RunStepDetailsToolCallsCodeOutputLogsObject.new(
+instance = OpenAiApi::RunStepDetailsToolCallsCodeOutputLogsObject.new(
   type: null,
   logs: null
 )

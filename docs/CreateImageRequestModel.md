@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateImageRequestModel
+# OpenAiApi::CreateImageRequestModel
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateImageRequestModel.new()
+instance = OpenAiApi::CreateImageRequestModel.new()
 ```
 

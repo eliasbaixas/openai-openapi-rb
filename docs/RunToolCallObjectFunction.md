@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::RunToolCallObjectFunction
+# OpenAiApi::RunToolCallObjectFunction
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::RunToolCallObjectFunction.new(
+instance = OpenAiApi::RunToolCallObjectFunction.new(
   name: null,
   arguments: null
 )

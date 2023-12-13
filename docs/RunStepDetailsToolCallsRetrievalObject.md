@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::RunStepDetailsToolCallsRetrievalObject
+# OpenAiApi::RunStepDetailsToolCallsRetrievalObject
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::RunStepDetailsToolCallsRetrievalObject.new(
+instance = OpenAiApi::RunStepDetailsToolCallsRetrievalObject.new(
   id: null,
   type: null,
   retrieval: null

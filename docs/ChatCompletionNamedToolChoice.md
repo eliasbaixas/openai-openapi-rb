@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ChatCompletionNamedToolChoice
+# OpenAiApi::ChatCompletionNamedToolChoice
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::ChatCompletionNamedToolChoice.new(
+instance = OpenAiApi::ChatCompletionNamedToolChoice.new(
   type: null,
   function: null
 )

@@ -200,10 +200,10 @@ require 'openai-openapi-rb/api/images_api'
 require 'openai-openapi-rb/api/models_api'
 require 'openai-openapi-rb/api/moderations_api'
 
-module OpenaiOpenapiRb
+module OpenAiApi
   class << self
     # Customize default settings for the SDK using block.
-    #   OpenaiOpenapiRb.configure do |config|
+    #   OpenAiApi.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end

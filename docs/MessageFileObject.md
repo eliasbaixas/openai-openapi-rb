@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::MessageFileObject
+# OpenAiApi::MessageFileObject
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::MessageFileObject.new(
+instance = OpenAiApi::MessageFileObject.new(
   id: null,
   object: null,
   created_at: null,

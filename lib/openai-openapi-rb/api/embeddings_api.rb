@@ -12,7 +12,7 @@ OpenAPI Generator version: 7.1.0
 
 require 'cgi'
 
-module OpenaiOpenapiRb
+module OpenAiApi
   class EmbeddingsApi
     attr_accessor :api_client
 

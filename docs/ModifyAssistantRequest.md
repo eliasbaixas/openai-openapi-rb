@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ModifyAssistantRequest
+# OpenAiApi::ModifyAssistantRequest
 
 ## Properties
 
@@ -17,7 +17,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::ModifyAssistantRequest.new(
+instance = OpenAiApi::ModifyAssistantRequest.new(
   model: null,
   name: null,
   description: null,

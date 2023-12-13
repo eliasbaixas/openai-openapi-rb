@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::FilesApi
+# OpenAiApi::FilesApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -23,12 +23,12 @@ Upload a file that can be used across various endpoints. The size of all the fil
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FilesApi.new
+api_instance = OpenAiApi::FilesApi.new
 file = File.new('/path/to/some/file') # File | The File object (not file name) to be uploaded. 
 purpose = 'fine-tune' # String | The intended purpose of the uploaded file.  Use \\\"fine-tune\\\" for [Fine-tuning](/docs/api-reference/fine-tuning) and \\\"assistants\\\" for [Assistants](/docs/api-reference/assistants) and [Messages](/docs/api-reference/messages). This allows us to validate the format of the uploaded file is correct for fine-tuning. 
 
@@ -36,7 +36,7 @@ begin
   # Upload a file that can be used across various endpoints. The size of all the files uploaded by one organization can be up to 100 GB.  The size of individual files can be a maximum of 512 MB. See the [Assistants Tools guide](/docs/assistants/tools) to learn more about the types of files supported. The Fine-tuning API only supports `.jsonl` files.  Please [contact us](https://help.openai.com/) if you need to increase these storage limits. 
   result = api_instance.create_file(file, purpose)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->create_file: #{e}"
 end
 ```
@@ -54,7 +54,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <OpenAIFile>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->create_file_with_http_info: #{e}"
 end
 ```
@@ -92,19 +92,19 @@ Delete a file.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FilesApi.new
+api_instance = OpenAiApi::FilesApi.new
 file_id = 'file_id_example' # String | The ID of the file to use for this request.
 
 begin
   # Delete a file.
   result = api_instance.delete_file(file_id)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->delete_file: #{e}"
 end
 ```
@@ -122,7 +122,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeleteFileResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->delete_file_with_http_info: #{e}"
 end
 ```
@@ -159,19 +159,19 @@ Returns the contents of the specified file.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FilesApi.new
+api_instance = OpenAiApi::FilesApi.new
 file_id = 'file_id_example' # String | The ID of the file to use for this request.
 
 begin
   # Returns the contents of the specified file.
   result = api_instance.download_file(file_id)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->download_file: #{e}"
 end
 ```
@@ -189,7 +189,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => String
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->download_file_with_http_info: #{e}"
 end
 ```
@@ -226,12 +226,12 @@ Returns a list of files that belong to the user's organization.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FilesApi.new
+api_instance = OpenAiApi::FilesApi.new
 opts = {
   purpose: 'purpose_example' # String | Only return files with the given purpose.
 }
@@ -240,7 +240,7 @@ begin
   # Returns a list of files that belong to the user's organization.
   result = api_instance.list_files(opts)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->list_files: #{e}"
 end
 ```
@@ -258,7 +258,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListFilesResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->list_files_with_http_info: #{e}"
 end
 ```
@@ -295,19 +295,19 @@ Returns information about a specific file.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::FilesApi.new
+api_instance = OpenAiApi::FilesApi.new
 file_id = 'file_id_example' # String | The ID of the file to use for this request.
 
 begin
   # Returns information about a specific file.
   result = api_instance.retrieve_file(file_id)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->retrieve_file: #{e}"
 end
 ```
@@ -325,7 +325,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <OpenAIFile>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling FilesApi->retrieve_file_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::MessageContentTextObjectText
+# OpenAiApi::MessageContentTextObjectText
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::MessageContentTextObjectText.new(
+instance = OpenAiApi::MessageContentTextObjectText.new(
   value: null,
   annotations: null
 )

@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparameters
+# OpenAiApi::CreateFineTuningJobRequestHyperparameters
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenaiOpenapiRb::CreateFineTuningJobRequestHyperparameters.new(
+instance = OpenAiApi::CreateFineTuningJobRequestHyperparameters.new(
   batch_size: null,
   learning_rate_multiplier: null,
   n_epochs: null

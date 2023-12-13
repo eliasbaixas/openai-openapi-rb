@@ -1,4 +1,4 @@
-# OpenaiOpenapiRb::ImagesApi
+# OpenAiApi::ImagesApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -21,19 +21,19 @@ Creates an image given a prompt.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::ImagesApi.new
-create_image_request = OpenaiOpenapiRb::CreateImageRequest.new({prompt: 'A cute baby sea otter'}) # CreateImageRequest | 
+api_instance = OpenAiApi::ImagesApi.new
+create_image_request = OpenAiApi::CreateImageRequest.new({prompt: 'A cute baby sea otter'}) # CreateImageRequest | 
 
 begin
   # Creates an image given a prompt.
   result = api_instance.create_image(create_image_request)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ImagesApi->create_image: #{e}"
 end
 ```
@@ -51,7 +51,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ImagesResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ImagesApi->create_image_with_http_info: #{e}"
 end
 ```
@@ -88,17 +88,17 @@ Creates an edited or extended image given an original image and a prompt.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::ImagesApi.new
+api_instance = OpenAiApi::ImagesApi.new
 image = File.new('/path/to/some/file') # File | The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask.
 prompt = 'prompt_example' # String | A text description of the desired image(s). The maximum length is 1000 characters.
 opts = {
   mask: File.new('/path/to/some/file'), # File | An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where `image` should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as `image`.
-  model: OpenaiOpenapiRb::CreateImageEditRequestModel.new, # CreateImageEditRequestModel | 
+  model: OpenAiApi::CreateImageEditRequestModel.new, # CreateImageEditRequestModel | 
   n: 56, # Integer | The number of images to generate. Must be between 1 and 10.
   size: '256x256', # String | The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
   response_format: 'url', # String | The format in which the generated images are returned. Must be one of `url` or `b64_json`.
@@ -109,7 +109,7 @@ begin
   # Creates an edited or extended image given an original image and a prompt.
   result = api_instance.create_image_edit(image, prompt, opts)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ImagesApi->create_image_edit: #{e}"
 end
 ```
@@ -127,7 +127,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ImagesResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ImagesApi->create_image_edit_with_http_info: #{e}"
 end
 ```
@@ -171,15 +171,15 @@ Creates a variation of a given image.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenaiOpenapiRb.configure do |config|
+OpenAiApi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenaiOpenapiRb::ImagesApi.new
+api_instance = OpenAiApi::ImagesApi.new
 image = File.new('/path/to/some/file') # File | The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square.
 opts = {
-  model: OpenaiOpenapiRb::CreateImageEditRequestModel.new, # CreateImageEditRequestModel | 
+  model: OpenAiApi::CreateImageEditRequestModel.new, # CreateImageEditRequestModel | 
   n: 56, # Integer | The number of images to generate. Must be between 1 and 10. For `dall-e-3`, only `n=1` is supported.
   response_format: 'url', # String | The format in which the generated images are returned. Must be one of `url` or `b64_json`.
   size: '256x256', # String | The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
@@ -190,7 +190,7 @@ begin
   # Creates a variation of a given image.
   result = api_instance.create_image_variation(image, opts)
   p result
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ImagesApi->create_image_variation: #{e}"
 end
 ```
@@ -208,7 +208,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ImagesResponse>
-rescue OpenaiOpenapiRb::ApiError => e
+rescue OpenAiApi::ApiError => e
   puts "Error when calling ImagesApi->create_image_variation_with_http_info: #{e}"
 end
 ```

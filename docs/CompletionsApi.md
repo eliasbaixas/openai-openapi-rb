@@ -1,4 +1,4 @@
-# OpenAiApi::CompletionsApi
+# OpenAi::CompletionsApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -19,19 +19,19 @@ Creates a completion for the provided prompt and parameters.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::CompletionsApi.new
-create_completion_request = OpenAiApi::CreateCompletionRequest.new({model: OpenAiApi::CreateCompletionRequestModel.new, prompt: nil}) # CreateCompletionRequest | 
+api_instance = OpenAi::CompletionsApi.new
+create_completion_request = OpenAi::CreateCompletionRequest.new({model: OpenAi::CreateCompletionRequestModel.new, prompt: nil}) # CreateCompletionRequest | 
 
 begin
   # Creates a completion for the provided prompt and parameters.
   result = api_instance.create_completion(create_completion_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling CompletionsApi->create_completion: #{e}"
 end
 ```
@@ -49,7 +49,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCompletionResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling CompletionsApi->create_completion_with_http_info: #{e}"
 end
 ```

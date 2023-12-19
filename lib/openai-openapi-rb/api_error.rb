@@ -10,7 +10,7 @@ OpenAPI Generator version: 7.1.0
 
 =end
 
-module OpenAiApi
+module OpenAi
   class ApiError < StandardError
     attr_reader :code, :response_headers, :response_body
 

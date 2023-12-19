@@ -1,4 +1,4 @@
-# OpenAiApi::ChatCompletionRequestMessageContentPartText
+# OpenAi::ChatCompletionRequestMessageContentPartText
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ChatCompletionRequestMessageContentPartText.new(
+instance = OpenAi::ChatCompletionRequestMessageContentPartText.new(
   type: null,
   text: null
 )

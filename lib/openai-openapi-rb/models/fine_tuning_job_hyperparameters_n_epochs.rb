@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenAiApi
+module OpenAi
   # The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset. \"auto\" decides the optimal number of epochs based on the size of the dataset. If setting the number manually, we support any number between 1 and 50 epochs.
   module FineTuningJobHyperparametersNEpochs
     class << self
@@ -82,7 +82,7 @@ module OpenAiApi
             return data.each_with_object({}) { |(k, v), hsh| hsh[k] = find_and_cast_into_type(sub_type, v) }
           end
         else # model
-          const = OpenAiApi.const_get(klass)
+          const = OpenAi.const_get(klass)
           if const
             if const.respond_to?(:openapi_one_of) # nested oneOf model
               model = const.build(data)

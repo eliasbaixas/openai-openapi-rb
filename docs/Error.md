@@ -1,4 +1,4 @@
-# OpenAiApi::Error
+# OpenAi::Error
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::Error.new(
+instance = OpenAi::Error.new(
   code: null,
   message: null,
   param: null,

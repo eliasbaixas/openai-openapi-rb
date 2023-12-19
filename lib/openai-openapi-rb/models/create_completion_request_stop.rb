@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenAiApi
+module OpenAi
   # Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence. 
   module CreateCompletionRequestStop
     class << self
@@ -82,7 +82,7 @@ module OpenAiApi
             return data.each_with_object({}) { |(k, v), hsh| hsh[k] = find_and_cast_into_type(sub_type, v) }
           end
         else # model
-          const = OpenAiApi.const_get(klass)
+          const = OpenAi.const_get(klass)
           if const
             if const.respond_to?(:openapi_one_of) # nested oneOf model
               model = const.build(data)

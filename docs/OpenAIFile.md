@@ -1,4 +1,4 @@
-# OpenAiApi::OpenAIFile
+# OpenAi::OpenAIFile
 
 ## Properties
 
@@ -18,7 +18,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::OpenAIFile.new(
+instance = OpenAi::OpenAIFile.new(
   id: null,
   bytes: null,
   created_at: null,

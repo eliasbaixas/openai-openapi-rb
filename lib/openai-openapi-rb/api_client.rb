@@ -18,7 +18,7 @@ require 'time'
 require 'typhoeus'
 
 
-module OpenAiApi
+module OpenAi
   class ApiClient
     # The Configuration object holding settings to be used in the API client.
     attr_accessor :config
@@ -35,7 +35,8 @@ module OpenAiApi
       @user_agent = "OpenAPI-Generator/#{VERSION}/ruby"
       @default_headers = {
         'Content-Type' => 'application/json',
-        'User-Agent' => @user_agent
+        'User-Agent' => @user_agent,
+        'OpenAI-Beta' => 'assistants=v1'
       }
     end
 
@@ -278,7 +279,7 @@ module OpenAiApi
         end
       else
         # models (e.g. Pet) or oneOf
-        klass = OpenAiApi.const_get(return_type)
+        klass = OpenAi.const_get(return_type)
         klass.respond_to?(:openapi_one_of) ? klass.build(data) : klass.build_from_hash(data)
       end
     end

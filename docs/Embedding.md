@@ -1,4 +1,4 @@
-# OpenAiApi::Embedding
+# OpenAi::Embedding
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::Embedding.new(
+instance = OpenAi::Embedding.new(
   index: null,
   embedding: null,
   object: null

@@ -1,4 +1,4 @@
-# OpenAiApi::CreateFineTuneRequestModel
+# OpenAi::CreateFineTuneRequestModel
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateFineTuneRequestModel.new()
+instance = OpenAi::CreateFineTuneRequestModel.new()
 ```
 

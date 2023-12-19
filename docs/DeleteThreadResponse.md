@@ -1,4 +1,4 @@
-# OpenAiApi::DeleteThreadResponse
+# OpenAi::DeleteThreadResponse
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::DeleteThreadResponse.new(
+instance = OpenAi::DeleteThreadResponse.new(
   id: null,
   deleted: null,
   object: null

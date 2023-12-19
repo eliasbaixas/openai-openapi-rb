@@ -1,4 +1,4 @@
-# OpenAiApi::CreateChatCompletionStreamResponseChoicesInner
+# OpenAi::CreateChatCompletionStreamResponseChoicesInner
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateChatCompletionStreamResponseChoicesInner.new(
+instance = OpenAi::CreateChatCompletionStreamResponseChoicesInner.new(
   delta: null,
   finish_reason: null,
   index: null

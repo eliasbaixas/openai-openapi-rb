@@ -1,4 +1,4 @@
-# OpenAiApi::CreateCompletionRequestPrompt
+# OpenAi::CreateCompletionRequestPrompt
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::CreateCompletionRequestPrompt.openapi_one_of
+OpenAi::CreateCompletionRequestPrompt.openapi_one_of
 # =>
 # [
 #   :'Array<Array<Integer>>',
@@ -30,10 +30,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::CreateCompletionRequestPrompt.build(data)
+OpenAi::CreateCompletionRequestPrompt.build(data)
 # => #<Array<Array<Integer>>:0x00007fdd4aab02a0>
 
-OpenAiApi::CreateCompletionRequestPrompt.build(data_that_doesnt_match)
+OpenAi::CreateCompletionRequestPrompt.build(data_that_doesnt_match)
 # => nil
 ```
 

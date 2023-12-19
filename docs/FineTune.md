@@ -1,4 +1,4 @@
-# OpenAiApi::FineTune
+# OpenAi::FineTune
 
 ## Properties
 
@@ -23,7 +23,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::FineTune.new(
+instance = OpenAi::FineTune.new(
   id: null,
   created_at: null,
   events: null,

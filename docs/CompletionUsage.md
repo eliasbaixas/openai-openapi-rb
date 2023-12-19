@@ -1,4 +1,4 @@
-# OpenAiApi::CompletionUsage
+# OpenAi::CompletionUsage
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CompletionUsage.new(
+instance = OpenAi::CompletionUsage.new(
   completion_tokens: null,
   prompt_tokens: null,
   total_tokens: null

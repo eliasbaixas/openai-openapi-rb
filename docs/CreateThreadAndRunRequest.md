@@ -1,4 +1,4 @@
-# OpenAiApi::CreateThreadAndRunRequest
+# OpenAi::CreateThreadAndRunRequest
 
 ## Properties
 
@@ -16,7 +16,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateThreadAndRunRequest.new(
+instance = OpenAi::CreateThreadAndRunRequest.new(
   assistant_id: null,
   thread: null,
   model: null,

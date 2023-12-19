@@ -1,4 +1,4 @@
-# OpenAiApi::AssistantToolsRetrieval
+# OpenAi::AssistantToolsRetrieval
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::AssistantToolsRetrieval.new(
+instance = OpenAi::AssistantToolsRetrieval.new(
   type: null
 )
 ```

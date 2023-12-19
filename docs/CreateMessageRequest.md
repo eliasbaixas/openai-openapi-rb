@@ -1,4 +1,4 @@
-# OpenAiApi::CreateMessageRequest
+# OpenAi::CreateMessageRequest
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateMessageRequest.new(
+instance = OpenAi::CreateMessageRequest.new(
   role: null,
   content: null,
   file_ids: null,

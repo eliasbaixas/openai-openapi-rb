@@ -10,6 +10,6 @@ OpenAPI Generator version: 7.1.0
 
 =end
 
-module OpenAiApi
+module OpenAi
   VERSION = '1.0.0'
 end

@@ -1,4 +1,4 @@
-# OpenAiApi::ImagesResponse
+# OpenAi::ImagesResponse
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ImagesResponse.new(
+instance = OpenAi::ImagesResponse.new(
   created: null,
   data: null
 )

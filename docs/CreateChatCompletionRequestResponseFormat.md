@@ -1,4 +1,4 @@
-# OpenAiApi::CreateChatCompletionRequestResponseFormat
+# OpenAi::CreateChatCompletionRequestResponseFormat
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateChatCompletionRequestResponseFormat.new(
+instance = OpenAi::CreateChatCompletionRequestResponseFormat.new(
   type: json_object
 )
 ```

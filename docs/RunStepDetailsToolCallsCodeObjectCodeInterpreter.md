@@ -1,4 +1,4 @@
-# OpenAiApi::RunStepDetailsToolCallsCodeObjectCodeInterpreter
+# OpenAi::RunStepDetailsToolCallsCodeObjectCodeInterpreter
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::RunStepDetailsToolCallsCodeObjectCodeInterpreter.new(
+instance = OpenAi::RunStepDetailsToolCallsCodeObjectCodeInterpreter.new(
   input: null,
   outputs: null
 )

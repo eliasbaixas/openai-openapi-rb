@@ -1,4 +1,4 @@
-# OpenAiApi::FineTuningJobError
+# OpenAi::FineTuningJobError
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::FineTuningJobError.new(
+instance = OpenAi::FineTuningJobError.new(
   code: null,
   message: null,
   param: null

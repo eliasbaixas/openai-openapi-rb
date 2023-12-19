@@ -1,4 +1,4 @@
-# OpenAiApi::CreateRunRequest
+# OpenAi::CreateRunRequest
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateRunRequest.new(
+instance = OpenAi::CreateRunRequest.new(
   assistant_id: null,
   model: null,
   instructions: null,

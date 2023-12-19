@@ -1,4 +1,4 @@
-# OpenAiApi::EmbeddingsApi
+# OpenAi::EmbeddingsApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -19,19 +19,19 @@ Creates an embedding vector representing the input text.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::EmbeddingsApi.new
-create_embedding_request = OpenAiApi::CreateEmbeddingRequest.new({input: nil, model: OpenAiApi::CreateEmbeddingRequestModel.new}) # CreateEmbeddingRequest | 
+api_instance = OpenAi::EmbeddingsApi.new
+create_embedding_request = OpenAi::CreateEmbeddingRequest.new({input: nil, model: OpenAi::CreateEmbeddingRequestModel.new}) # CreateEmbeddingRequest | 
 
 begin
   # Creates an embedding vector representing the input text.
   result = api_instance.create_embedding(create_embedding_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling EmbeddingsApi->create_embedding: #{e}"
 end
 ```
@@ -49,7 +49,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateEmbeddingResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling EmbeddingsApi->create_embedding_with_http_info: #{e}"
 end
 ```

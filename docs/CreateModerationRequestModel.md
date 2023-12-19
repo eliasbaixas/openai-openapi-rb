@@ -1,4 +1,4 @@
-# OpenAiApi::CreateModerationRequestModel
+# OpenAi::CreateModerationRequestModel
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateModerationRequestModel.new()
+instance = OpenAi::CreateModerationRequestModel.new()
 ```
 

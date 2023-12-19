@@ -1,4 +1,4 @@
-# OpenAiApi::ChatCompletionToolChoiceOption
+# OpenAi::ChatCompletionToolChoiceOption
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::ChatCompletionToolChoiceOption.openapi_one_of
+OpenAi::ChatCompletionToolChoiceOption.openapi_one_of
 # =>
 # [
 #   :'ChatCompletionNamedToolChoice',
@@ -28,10 +28,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::ChatCompletionToolChoiceOption.build(data)
+OpenAi::ChatCompletionToolChoiceOption.build(data)
 # => #<ChatCompletionNamedToolChoice:0x00007fdd4aab02a0>
 
-OpenAiApi::ChatCompletionToolChoiceOption.build(data_that_doesnt_match)
+OpenAi::ChatCompletionToolChoiceOption.build(data_that_doesnt_match)
 # => nil
 ```
 

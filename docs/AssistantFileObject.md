@@ -1,4 +1,4 @@
-# OpenAiApi::AssistantFileObject
+# OpenAi::AssistantFileObject
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::AssistantFileObject.new(
+instance = OpenAi::AssistantFileObject.new(
   id: null,
   object: null,
   created_at: null,

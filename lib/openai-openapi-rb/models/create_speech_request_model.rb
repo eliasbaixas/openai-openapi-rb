@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenAiApi
+module OpenAi
   # One of the available [TTS models](/docs/models/tts): `tts-1` or `tts-1-hd` 
   module CreateSpeechRequestModel
     class << self
@@ -80,7 +80,7 @@ module OpenAiApi
             return data.each_with_object({}) { |(k, v), hsh| hsh[k] = find_and_cast_into_type(sub_type, v) }
           end
         else # model
-          const = OpenAiApi.const_get(klass)
+          const = OpenAi.const_get(klass)
           if const
             if const.respond_to?(:openapi_any_of) # nested anyOf model
               model = const.build(data)

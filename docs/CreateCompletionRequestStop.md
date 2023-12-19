@@ -1,4 +1,4 @@
-# OpenAiApi::CreateCompletionRequestStop
+# OpenAi::CreateCompletionRequestStop
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::CreateCompletionRequestStop.openapi_one_of
+OpenAi::CreateCompletionRequestStop.openapi_one_of
 # =>
 # [
 #   :'Array<String>',
@@ -28,10 +28,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::CreateCompletionRequestStop.build(data)
+OpenAi::CreateCompletionRequestStop.build(data)
 # => #<Array<String>:0x00007fdd4aab02a0>
 
-OpenAiApi::CreateCompletionRequestStop.build(data_that_doesnt_match)
+OpenAi::CreateCompletionRequestStop.build(data_that_doesnt_match)
 # => nil
 ```
 

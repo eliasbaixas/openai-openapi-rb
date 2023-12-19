@@ -1,4 +1,4 @@
-# OpenAiApi::ThreadObject
+# OpenAi::ThreadObject
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ThreadObject.new(
+instance = OpenAi::ThreadObject.new(
   id: null,
   object: null,
   created_at: null,

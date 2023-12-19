@@ -1,4 +1,4 @@
-# OpenAiApi::ChatApi
+# OpenAi::ChatApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -19,19 +19,19 @@ Creates a model response for the given chat conversation.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::ChatApi.new
-create_chat_completion_request = OpenAiApi::CreateChatCompletionRequest.new({messages: [OpenAiApi::ChatCompletionRequestAssistantMessage.new({role: 'assistant'})], model: OpenAiApi::CreateChatCompletionRequestModel.new}) # CreateChatCompletionRequest | 
+api_instance = OpenAi::ChatApi.new
+create_chat_completion_request = OpenAi::CreateChatCompletionRequest.new({messages: [OpenAi::ChatCompletionRequestAssistantMessage.new({role: 'assistant'})], model: OpenAi::CreateChatCompletionRequestModel.new}) # CreateChatCompletionRequest | 
 
 begin
   # Creates a model response for the given chat conversation.
   result = api_instance.create_chat_completion(create_chat_completion_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling ChatApi->create_chat_completion: #{e}"
 end
 ```
@@ -49,7 +49,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateChatCompletionResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling ChatApi->create_chat_completion_with_http_info: #{e}"
 end
 ```

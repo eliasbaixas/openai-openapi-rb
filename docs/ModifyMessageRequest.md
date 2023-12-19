@@ -1,4 +1,4 @@
-# OpenAiApi::ModifyMessageRequest
+# OpenAi::ModifyMessageRequest
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ModifyMessageRequest.new(
+instance = OpenAi::ModifyMessageRequest.new(
   metadata: null
 )
 ```

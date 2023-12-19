@@ -1,4 +1,4 @@
-# OpenAiApi::ChatCompletionStreamResponseDelta
+# OpenAi::ChatCompletionStreamResponseDelta
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ChatCompletionStreamResponseDelta.new(
+instance = OpenAi::ChatCompletionStreamResponseDelta.new(
   content: null,
   function_call: null,
   tool_calls: null,

@@ -1,4 +1,4 @@
-# OpenAiApi::CreateImageRequest
+# OpenAi::CreateImageRequest
 
 ## Properties
 
@@ -18,7 +18,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateImageRequest.new(
+instance = OpenAi::CreateImageRequest.new(
   prompt: A cute baby sea otter,
   model: null,
   n: 1,

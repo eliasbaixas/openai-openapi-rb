@@ -1,4 +1,4 @@
-# OpenAiApi::CreateThreadRequest
+# OpenAi::CreateThreadRequest
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateThreadRequest.new(
+instance = OpenAi::CreateThreadRequest.new(
   messages: null,
   metadata: null
 )

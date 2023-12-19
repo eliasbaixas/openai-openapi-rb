@@ -17,7 +17,7 @@ require "openai-openapi-rb/version"
 
 Gem::Specification.new do |s|
   s.name        = "openai-openapi-rb"
-  s.version     = OpenAiApi::VERSION
+  s.version     = OpenAi::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["OpenAPI-Generator"]
   s.email       = [""]
@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec', '~> 3.6', '>= 3.6.0'
 
-  s.files         = `find *`.split("\n").uniq.sort.select { |f| !f.empty? }
+  s.files         = `find lib`.split("\n").uniq.sort.select { |f| !f.empty? }
   s.test_files    = `find spec/*`.split("\n")
   s.executables   = []
   s.require_paths = ["lib"]

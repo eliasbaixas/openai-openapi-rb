@@ -1,4 +1,4 @@
-# OpenAiApi::ListThreadsResponse
+# OpenAi::ListThreadsResponse
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ListThreadsResponse.new(
+instance = OpenAi::ListThreadsResponse.new(
   object: list,
   data: null,
   first_id: asst_abc123,

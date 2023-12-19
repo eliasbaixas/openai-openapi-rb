@@ -1,4 +1,4 @@
-# OpenAiApi::ChatCompletionRequestMessageContentPartImageImageUrl
+# OpenAi::ChatCompletionRequestMessageContentPartImageImageUrl
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ChatCompletionRequestMessageContentPartImageImageUrl.new(
+instance = OpenAi::ChatCompletionRequestMessageContentPartImageImageUrl.new(
   url: null,
   detail: null
 )

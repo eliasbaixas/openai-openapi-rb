@@ -10,7 +10,7 @@ OpenAPI Generator version: 7.1.0
 
 =end
 
-module OpenAiApi
+module OpenAi
   class Configuration
     # Defines url scheme
     attr_accessor :scheme

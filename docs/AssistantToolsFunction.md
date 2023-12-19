@@ -1,4 +1,4 @@
-# OpenAiApi::AssistantToolsFunction
+# OpenAi::AssistantToolsFunction
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::AssistantToolsFunction.new(
+instance = OpenAi::AssistantToolsFunction.new(
   type: null,
   function: null
 )

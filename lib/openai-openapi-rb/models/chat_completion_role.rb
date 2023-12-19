@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenAiApi
+module OpenAi
   class ChatCompletionRole
     SYSTEM = "system".freeze
     USER = "user".freeze

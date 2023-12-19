@@ -1,4 +1,4 @@
-# OpenAiApi::RunStepDetailsToolCallsCodeOutputImageObjectImage
+# OpenAi::RunStepDetailsToolCallsCodeOutputImageObjectImage
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::RunStepDetailsToolCallsCodeOutputImageObjectImage.new(
+instance = OpenAi::RunStepDetailsToolCallsCodeOutputImageObjectImage.new(
   file_id: null
 )
 ```

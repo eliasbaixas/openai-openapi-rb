@@ -1,4 +1,4 @@
-# OpenAiApi::FineTuneHyperparams
+# OpenAi::FineTuneHyperparams
 
 ## Properties
 
@@ -17,7 +17,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::FineTuneHyperparams.new(
+instance = OpenAi::FineTuneHyperparams.new(
   batch_size: null,
   classification_n_classes: null,
   classification_positive_class: null,

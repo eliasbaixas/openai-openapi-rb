@@ -1,4 +1,4 @@
-# OpenAiApi::ListAssistantsResponse
+# OpenAi::ListAssistantsResponse
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ListAssistantsResponse.new(
+instance = OpenAi::ListAssistantsResponse.new(
   object: list,
   data: null,
   first_id: asst_abc123,

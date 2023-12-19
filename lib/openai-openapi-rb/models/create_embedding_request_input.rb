@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenAiApi
+module OpenAi
   # Input text to embed, encoded as a string or array of tokens. To embed multiple inputs in a single request, pass an array of strings or array of token arrays. The input must not exceed the max input tokens for the model (8192 tokens for `text-embedding-ada-002`), cannot be an empty string, and any array must be 2048 dimensions or less. [Example Python code](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken) for counting tokens. 
   module CreateEmbeddingRequestInput
     class << self
@@ -84,7 +84,7 @@ module OpenAiApi
             return data.each_with_object({}) { |(k, v), hsh| hsh[k] = find_and_cast_into_type(sub_type, v) }
           end
         else # model
-          const = OpenAiApi.const_get(klass)
+          const = OpenAi.const_get(klass)
           if const
             if const.respond_to?(:openapi_one_of) # nested oneOf model
               model = const.build(data)

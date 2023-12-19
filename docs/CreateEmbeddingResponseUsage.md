@@ -1,4 +1,4 @@
-# OpenAiApi::CreateEmbeddingResponseUsage
+# OpenAi::CreateEmbeddingResponseUsage
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateEmbeddingResponseUsage.new(
+instance = OpenAi::CreateEmbeddingResponseUsage.new(
   prompt_tokens: null,
   total_tokens: null
 )

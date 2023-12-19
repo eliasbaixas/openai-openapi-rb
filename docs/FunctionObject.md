@@ -1,4 +1,4 @@
-# OpenAiApi::FunctionObject
+# OpenAi::FunctionObject
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::FunctionObject.new(
+instance = OpenAi::FunctionObject.new(
   description: null,
   name: null,
   parameters: null

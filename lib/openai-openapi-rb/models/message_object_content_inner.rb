@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenAiApi
+module OpenAi
   module MessageObjectContentInner
     class << self
       # List of class defined in oneOf (OpenAPI v3)
@@ -81,7 +81,7 @@ module OpenAiApi
             return data.each_with_object({}) { |(k, v), hsh| hsh[k] = find_and_cast_into_type(sub_type, v) }
           end
         else # model
-          const = OpenAiApi.const_get(klass)
+          const = OpenAi.const_get(klass)
           if const
             if const.respond_to?(:openapi_one_of) # nested oneOf model
               model = const.build(data)

@@ -1,4 +1,4 @@
-# OpenAiApi::CreateEditRequest
+# OpenAi::CreateEditRequest
 
 ## Properties
 
@@ -16,7 +16,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateEditRequest.new(
+instance = OpenAi::CreateEditRequest.new(
   instruction: Fix the spelling mistakes.,
   model: null,
   input: What day of the wek is it?,

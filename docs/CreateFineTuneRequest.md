@@ -1,4 +1,4 @@
-# OpenAiApi::CreateFineTuneRequest
+# OpenAi::CreateFineTuneRequest
 
 ## Properties
 
@@ -22,7 +22,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateFineTuneRequest.new(
+instance = OpenAi::CreateFineTuneRequest.new(
   training_file: file-abc123,
   batch_size: null,
   classification_betas: [0.6,1,1.5,2],

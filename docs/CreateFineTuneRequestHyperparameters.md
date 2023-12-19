@@ -1,4 +1,4 @@
-# OpenAiApi::CreateFineTuneRequestHyperparameters
+# OpenAi::CreateFineTuneRequestHyperparameters
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateFineTuneRequestHyperparameters.new(
+instance = OpenAi::CreateFineTuneRequestHyperparameters.new(
   n_epochs: null
 )
 ```

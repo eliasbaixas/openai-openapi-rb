@@ -13,7 +13,7 @@ OpenAPI Generator version: 7.1.0
 require 'date'
 require 'time'
 
-module OpenAiApi
+module OpenAi
   class CreateChatCompletionFunctionResponseChoicesInner
     # The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `function_call` if the model called a function. 
     attr_accessor :finish_reason
@@ -78,13 +78,13 @@ module OpenAiApi
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `OpenAiApi::CreateChatCompletionFunctionResponseChoicesInner` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `OpenAi::CreateChatCompletionFunctionResponseChoicesInner` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `OpenAiApi::CreateChatCompletionFunctionResponseChoicesInner`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `OpenAi::CreateChatCompletionFunctionResponseChoicesInner`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
@@ -233,7 +233,7 @@ module OpenAiApi
         end
       else # model
         # models (e.g. Pet) or oneOf
-        klass = OpenAiApi.const_get(type)
+        klass = OpenAi.const_get(type)
         klass.respond_to?(:openapi_any_of) || klass.respond_to?(:openapi_one_of) ? klass.build(value) : klass.build_from_hash(value)
       end
     end

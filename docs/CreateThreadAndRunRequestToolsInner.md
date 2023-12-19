@@ -1,4 +1,4 @@
-# OpenAiApi::CreateThreadAndRunRequestToolsInner
+# OpenAi::CreateThreadAndRunRequestToolsInner
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::CreateThreadAndRunRequestToolsInner.openapi_one_of
+OpenAi::CreateThreadAndRunRequestToolsInner.openapi_one_of
 # =>
 # [
 #   :'AssistantToolsCode',
@@ -29,10 +29,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::CreateThreadAndRunRequestToolsInner.build(data)
+OpenAi::CreateThreadAndRunRequestToolsInner.build(data)
 # => #<AssistantToolsCode:0x00007fdd4aab02a0>
 
-OpenAiApi::CreateThreadAndRunRequestToolsInner.build(data_that_doesnt_match)
+OpenAi::CreateThreadAndRunRequestToolsInner.build(data_that_doesnt_match)
 # => nil
 ```
 

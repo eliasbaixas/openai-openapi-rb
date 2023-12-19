@@ -1,4 +1,4 @@
-# OpenAiApi::ChatCompletionFunctions
+# OpenAi::ChatCompletionFunctions
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ChatCompletionFunctions.new(
+instance = OpenAi::ChatCompletionFunctions.new(
   description: null,
   name: null,
   parameters: null

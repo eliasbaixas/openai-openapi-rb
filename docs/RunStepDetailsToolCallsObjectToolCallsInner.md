@@ -1,4 +1,4 @@
-# OpenAiApi::RunStepDetailsToolCallsObjectToolCallsInner
+# OpenAi::RunStepDetailsToolCallsObjectToolCallsInner
 
 ## Class instance methods
 
@@ -11,7 +11,7 @@ Returns the list of classes defined in oneOf.
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::RunStepDetailsToolCallsObjectToolCallsInner.openapi_one_of
+OpenAi::RunStepDetailsToolCallsObjectToolCallsInner.openapi_one_of
 # =>
 # [
 #   :'RunStepDetailsToolCallsCodeObject',
@@ -29,10 +29,10 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 ```ruby
 require 'openai-openapi-rb'
 
-OpenAiApi::RunStepDetailsToolCallsObjectToolCallsInner.build(data)
+OpenAi::RunStepDetailsToolCallsObjectToolCallsInner.build(data)
 # => #<RunStepDetailsToolCallsCodeObject:0x00007fdd4aab02a0>
 
-OpenAiApi::RunStepDetailsToolCallsObjectToolCallsInner.build(data_that_doesnt_match)
+OpenAi::RunStepDetailsToolCallsObjectToolCallsInner.build(data_that_doesnt_match)
 # => nil
 ```
 

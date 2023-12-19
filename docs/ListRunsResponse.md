@@ -1,4 +1,4 @@
-# OpenAiApi::ListRunsResponse
+# OpenAi::ListRunsResponse
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ListRunsResponse.new(
+instance = OpenAi::ListRunsResponse.new(
   object: list,
   data: null,
   first_id: run_abc123,

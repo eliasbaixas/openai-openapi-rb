@@ -1,4 +1,4 @@
-# OpenAiApi::CreateCompletionResponse
+# OpenAi::CreateCompletionResponse
 
 ## Properties
 
@@ -17,7 +17,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateCompletionResponse.new(
+instance = OpenAi::CreateCompletionResponse.new(
   id: null,
   choices: null,
   created: null,

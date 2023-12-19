@@ -1,4 +1,4 @@
-# OpenAiApi::CreateEditResponse
+# OpenAi::CreateEditResponse
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::CreateEditResponse.new(
+instance = OpenAi::CreateEditResponse.new(
   choices: null,
   object: null,
   created: null,

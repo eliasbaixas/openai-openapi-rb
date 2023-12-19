@@ -1,4 +1,4 @@
-# OpenAiApi::RunStepDetailsMessageCreationObject
+# OpenAi::RunStepDetailsMessageCreationObject
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::RunStepDetailsMessageCreationObject.new(
+instance = OpenAi::RunStepDetailsMessageCreationObject.new(
   type: null,
   message_creation: null
 )

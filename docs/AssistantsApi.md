@@ -1,4 +1,4 @@
-# OpenAiApi::AssistantsApi
+# OpenAi::AssistantsApi
 
 All URIs are relative to *https://api.openai.com/v1*
 
@@ -46,12 +46,12 @@ Cancels a run that is `in_progress`.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread to which this run belongs.
 run_id = 'run_id_example' # String | The ID of the run to cancel.
 
@@ -59,7 +59,7 @@ begin
   # Cancels a run that is `in_progress`.
   result = api_instance.cancel_run(thread_id, run_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->cancel_run: #{e}"
 end
 ```
@@ -77,7 +77,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->cancel_run_with_http_info: #{e}"
 end
 ```
@@ -115,19 +115,19 @@ Create an assistant with a model and instructions.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
-create_assistant_request = OpenAiApi::CreateAssistantRequest.new({model: 'model_example'}) # CreateAssistantRequest | 
+api_instance = OpenAi::AssistantsApi.new
+create_assistant_request = OpenAi::CreateAssistantRequest.new({model: 'model_example'}) # CreateAssistantRequest | 
 
 begin
   # Create an assistant with a model and instructions.
   result = api_instance.create_assistant(create_assistant_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_assistant: #{e}"
 end
 ```
@@ -145,7 +145,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AssistantObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_assistant_with_http_info: #{e}"
 end
 ```
@@ -182,20 +182,20 @@ Create an assistant file by attaching a [File](/docs/api-reference/files) to an 
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 assistant_id = 'file-abc123' # String | The ID of the assistant for which to create a File. 
-create_assistant_file_request = OpenAiApi::CreateAssistantFileRequest.new({file_id: 'file_id_example'}) # CreateAssistantFileRequest | 
+create_assistant_file_request = OpenAi::CreateAssistantFileRequest.new({file_id: 'file_id_example'}) # CreateAssistantFileRequest | 
 
 begin
   # Create an assistant file by attaching a [File](/docs/api-reference/files) to an [assistant](/docs/api-reference/assistants).
   result = api_instance.create_assistant_file(assistant_id, create_assistant_file_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_assistant_file: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AssistantFileObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_assistant_file_with_http_info: #{e}"
 end
 ```
@@ -251,20 +251,20 @@ Create a message.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the [thread](/docs/api-reference/threads) to create a message for.
-create_message_request = OpenAiApi::CreateMessageRequest.new({role: 'user', content: 'content_example'}) # CreateMessageRequest | 
+create_message_request = OpenAi::CreateMessageRequest.new({role: 'user', content: 'content_example'}) # CreateMessageRequest | 
 
 begin
   # Create a message.
   result = api_instance.create_message(thread_id, create_message_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_message: #{e}"
 end
 ```
@@ -282,7 +282,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MessageObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_message_with_http_info: #{e}"
 end
 ```
@@ -320,20 +320,20 @@ Create a run.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread to run.
-create_run_request = OpenAiApi::CreateRunRequest.new({assistant_id: 'assistant_id_example'}) # CreateRunRequest | 
+create_run_request = OpenAi::CreateRunRequest.new({assistant_id: 'assistant_id_example'}) # CreateRunRequest | 
 
 begin
   # Create a run.
   result = api_instance.create_run(thread_id, create_run_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_run: #{e}"
 end
 ```
@@ -351,7 +351,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_run_with_http_info: #{e}"
 end
 ```
@@ -389,21 +389,21 @@ Create a thread.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 opts = {
-  create_thread_request: OpenAiApi::CreateThreadRequest.new # CreateThreadRequest | 
+  create_thread_request: OpenAi::CreateThreadRequest.new # CreateThreadRequest | 
 }
 
 begin
   # Create a thread.
   result = api_instance.create_thread(opts)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_thread: #{e}"
 end
 ```
@@ -421,7 +421,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ThreadObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_thread_with_http_info: #{e}"
 end
 ```
@@ -458,19 +458,19 @@ Create a thread and run it in one request.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
-create_thread_and_run_request = OpenAiApi::CreateThreadAndRunRequest.new({assistant_id: 'assistant_id_example'}) # CreateThreadAndRunRequest | 
+api_instance = OpenAi::AssistantsApi.new
+create_thread_and_run_request = OpenAi::CreateThreadAndRunRequest.new({assistant_id: 'assistant_id_example'}) # CreateThreadAndRunRequest | 
 
 begin
   # Create a thread and run it in one request.
   result = api_instance.create_thread_and_run(create_thread_and_run_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_thread_and_run: #{e}"
 end
 ```
@@ -488,7 +488,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->create_thread_and_run_with_http_info: #{e}"
 end
 ```
@@ -525,19 +525,19 @@ Delete an assistant.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 assistant_id = 'assistant_id_example' # String | The ID of the assistant to delete.
 
 begin
   # Delete an assistant.
   result = api_instance.delete_assistant(assistant_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->delete_assistant: #{e}"
 end
 ```
@@ -555,7 +555,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeleteAssistantResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->delete_assistant_with_http_info: #{e}"
 end
 ```
@@ -592,12 +592,12 @@ Delete an assistant file.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 assistant_id = 'assistant_id_example' # String | The ID of the assistant that the file belongs to.
 file_id = 'file_id_example' # String | The ID of the file to delete.
 
@@ -605,7 +605,7 @@ begin
   # Delete an assistant file.
   result = api_instance.delete_assistant_file(assistant_id, file_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->delete_assistant_file: #{e}"
 end
 ```
@@ -623,7 +623,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeleteAssistantFileResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->delete_assistant_file_with_http_info: #{e}"
 end
 ```
@@ -661,19 +661,19 @@ Delete a thread.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread to delete.
 
 begin
   # Delete a thread.
   result = api_instance.delete_thread(thread_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->delete_thread: #{e}"
 end
 ```
@@ -691,7 +691,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeleteThreadResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->delete_thread_with_http_info: #{e}"
 end
 ```
@@ -728,19 +728,19 @@ Retrieves an assistant.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 assistant_id = 'assistant_id_example' # String | The ID of the assistant to retrieve.
 
 begin
   # Retrieves an assistant.
   result = api_instance.get_assistant(assistant_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_assistant: #{e}"
 end
 ```
@@ -758,7 +758,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AssistantObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_assistant_with_http_info: #{e}"
 end
 ```
@@ -795,12 +795,12 @@ Retrieves an AssistantFile.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 assistant_id = 'assistant_id_example' # String | The ID of the assistant who the file belongs to.
 file_id = 'file_id_example' # String | The ID of the file we're getting.
 
@@ -808,7 +808,7 @@ begin
   # Retrieves an AssistantFile.
   result = api_instance.get_assistant_file(assistant_id, file_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_assistant_file: #{e}"
 end
 ```
@@ -826,7 +826,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AssistantFileObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_assistant_file_with_http_info: #{e}"
 end
 ```
@@ -864,12 +864,12 @@ Retrieve a message.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the [thread](/docs/api-reference/threads) to which this message belongs.
 message_id = 'message_id_example' # String | The ID of the message to retrieve.
 
@@ -877,7 +877,7 @@ begin
   # Retrieve a message.
   result = api_instance.get_message(thread_id, message_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_message: #{e}"
 end
 ```
@@ -895,7 +895,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MessageObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_message_with_http_info: #{e}"
 end
 ```
@@ -933,12 +933,12 @@ Retrieves a message file.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_abc123' # String | The ID of the thread to which the message and File belong.
 message_id = 'msg_abc123' # String | The ID of the message the file belongs to.
 file_id = 'file-abc123' # String | The ID of the file being retrieved.
@@ -947,7 +947,7 @@ begin
   # Retrieves a message file.
   result = api_instance.get_message_file(thread_id, message_id, file_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_message_file: #{e}"
 end
 ```
@@ -965,7 +965,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MessageFileObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_message_file_with_http_info: #{e}"
 end
 ```
@@ -1004,12 +1004,12 @@ Retrieves a run.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the [thread](/docs/api-reference/threads) that was run.
 run_id = 'run_id_example' # String | The ID of the run to retrieve.
 
@@ -1017,7 +1017,7 @@ begin
   # Retrieves a run.
   result = api_instance.get_run(thread_id, run_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_run: #{e}"
 end
 ```
@@ -1035,7 +1035,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_run_with_http_info: #{e}"
 end
 ```
@@ -1073,12 +1073,12 @@ Retrieves a run step.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread to which the run and run step belongs.
 run_id = 'run_id_example' # String | The ID of the run to which the run step belongs.
 step_id = 'step_id_example' # String | The ID of the run step to retrieve.
@@ -1087,7 +1087,7 @@ begin
   # Retrieves a run step.
   result = api_instance.get_run_step(thread_id, run_id, step_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_run_step: #{e}"
 end
 ```
@@ -1105,7 +1105,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunStepObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_run_step_with_http_info: #{e}"
 end
 ```
@@ -1144,19 +1144,19 @@ Retrieves a thread.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread to retrieve.
 
 begin
   # Retrieves a thread.
   result = api_instance.get_thread(thread_id)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_thread: #{e}"
 end
 ```
@@ -1174,7 +1174,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ThreadObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->get_thread_with_http_info: #{e}"
 end
 ```
@@ -1211,12 +1211,12 @@ Returns a list of assistant files.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 assistant_id = 'assistant_id_example' # String | The ID of the assistant the file belongs to.
 opts = {
   limit: 56, # Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
@@ -1229,7 +1229,7 @@ begin
   # Returns a list of assistant files.
   result = api_instance.list_assistant_files(assistant_id, opts)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_assistant_files: #{e}"
 end
 ```
@@ -1247,7 +1247,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListAssistantFilesResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_assistant_files_with_http_info: #{e}"
 end
 ```
@@ -1288,12 +1288,12 @@ Returns a list of assistants.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 opts = {
   limit: 56, # Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
   order: 'asc', # String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
@@ -1305,7 +1305,7 @@ begin
   # Returns a list of assistants.
   result = api_instance.list_assistants(opts)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_assistants: #{e}"
 end
 ```
@@ -1323,7 +1323,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListAssistantsResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_assistants_with_http_info: #{e}"
 end
 ```
@@ -1363,12 +1363,12 @@ Returns a list of message files.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread that the message and files belong to.
 message_id = 'message_id_example' # String | The ID of the message that the files belongs to.
 opts = {
@@ -1382,7 +1382,7 @@ begin
   # Returns a list of message files.
   result = api_instance.list_message_files(thread_id, message_id, opts)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_message_files: #{e}"
 end
 ```
@@ -1400,7 +1400,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListMessageFilesResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_message_files_with_http_info: #{e}"
 end
 ```
@@ -1442,12 +1442,12 @@ Returns a list of messages for a given thread.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the [thread](/docs/api-reference/threads) the messages belong to.
 opts = {
   limit: 56, # Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
@@ -1460,7 +1460,7 @@ begin
   # Returns a list of messages for a given thread.
   result = api_instance.list_messages(thread_id, opts)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_messages: #{e}"
 end
 ```
@@ -1478,7 +1478,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListMessagesResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_messages_with_http_info: #{e}"
 end
 ```
@@ -1519,12 +1519,12 @@ Returns a list of run steps belonging to a run.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread the run and run steps belong to.
 run_id = 'run_id_example' # String | The ID of the run the run steps belong to.
 opts = {
@@ -1538,7 +1538,7 @@ begin
   # Returns a list of run steps belonging to a run.
   result = api_instance.list_run_steps(thread_id, run_id, opts)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_run_steps: #{e}"
 end
 ```
@@ -1556,7 +1556,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListRunStepsResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_run_steps_with_http_info: #{e}"
 end
 ```
@@ -1598,12 +1598,12 @@ Returns a list of runs belonging to a thread.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread the run belongs to.
 opts = {
   limit: 56, # Integer | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
@@ -1616,7 +1616,7 @@ begin
   # Returns a list of runs belonging to a thread.
   result = api_instance.list_runs(thread_id, opts)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_runs: #{e}"
 end
 ```
@@ -1634,7 +1634,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListRunsResponse>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->list_runs_with_http_info: #{e}"
 end
 ```
@@ -1675,20 +1675,20 @@ Modifies an assistant.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 assistant_id = 'assistant_id_example' # String | The ID of the assistant to modify.
-modify_assistant_request = OpenAiApi::ModifyAssistantRequest.new # ModifyAssistantRequest | 
+modify_assistant_request = OpenAi::ModifyAssistantRequest.new # ModifyAssistantRequest | 
 
 begin
   # Modifies an assistant.
   result = api_instance.modify_assistant(assistant_id, modify_assistant_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->modify_assistant: #{e}"
 end
 ```
@@ -1706,7 +1706,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AssistantObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->modify_assistant_with_http_info: #{e}"
 end
 ```
@@ -1744,21 +1744,21 @@ Modifies a message.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread to which this message belongs.
 message_id = 'message_id_example' # String | The ID of the message to modify.
-modify_message_request = OpenAiApi::ModifyMessageRequest.new # ModifyMessageRequest | 
+modify_message_request = OpenAi::ModifyMessageRequest.new # ModifyMessageRequest | 
 
 begin
   # Modifies a message.
   result = api_instance.modify_message(thread_id, message_id, modify_message_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->modify_message: #{e}"
 end
 ```
@@ -1776,7 +1776,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MessageObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->modify_message_with_http_info: #{e}"
 end
 ```
@@ -1815,21 +1815,21 @@ Modifies a run.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the [thread](/docs/api-reference/threads) that was run.
 run_id = 'run_id_example' # String | The ID of the run to modify.
-modify_run_request = OpenAiApi::ModifyRunRequest.new # ModifyRunRequest | 
+modify_run_request = OpenAi::ModifyRunRequest.new # ModifyRunRequest | 
 
 begin
   # Modifies a run.
   result = api_instance.modify_run(thread_id, run_id, modify_run_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->modify_run: #{e}"
 end
 ```
@@ -1847,7 +1847,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->modify_run_with_http_info: #{e}"
 end
 ```
@@ -1886,20 +1886,20 @@ Modifies a thread.
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the thread to modify. Only the `metadata` can be modified.
-modify_thread_request = OpenAiApi::ModifyThreadRequest.new # ModifyThreadRequest | 
+modify_thread_request = OpenAi::ModifyThreadRequest.new # ModifyThreadRequest | 
 
 begin
   # Modifies a thread.
   result = api_instance.modify_thread(thread_id, modify_thread_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->modify_thread: #{e}"
 end
 ```
@@ -1917,7 +1917,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ThreadObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->modify_thread_with_http_info: #{e}"
 end
 ```
@@ -1955,21 +1955,21 @@ When a run has the `status: \"requires_action\"` and `required_action.type` is `
 require 'time'
 require 'openai-openapi-rb'
 # setup authorization
-OpenAiApi.configure do |config|
+OpenAi.configure do |config|
   # Configure Bearer authorization: ApiKeyAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenAiApi::AssistantsApi.new
+api_instance = OpenAi::AssistantsApi.new
 thread_id = 'thread_id_example' # String | The ID of the [thread](/docs/api-reference/threads) to which this run belongs.
 run_id = 'run_id_example' # String | The ID of the run that requires the tool output submission.
-submit_tool_outputs_run_request = OpenAiApi::SubmitToolOutputsRunRequest.new({tool_outputs: [OpenAiApi::SubmitToolOutputsRunRequestToolOutputsInner.new]}) # SubmitToolOutputsRunRequest | 
+submit_tool_outputs_run_request = OpenAi::SubmitToolOutputsRunRequest.new({tool_outputs: [OpenAi::SubmitToolOutputsRunRequestToolOutputsInner.new]}) # SubmitToolOutputsRunRequest | 
 
 begin
   # When a run has the `status: \"requires_action\"` and `required_action.type` is `submit_tool_outputs`, this endpoint can be used to submit the outputs from the tool calls once they're all completed. All outputs must be submitted in a single request. 
   result = api_instance.submit_tool_ouputs_to_run(thread_id, run_id, submit_tool_outputs_run_request)
   p result
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->submit_tool_ouputs_to_run: #{e}"
 end
 ```
@@ -1987,7 +1987,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunObject>
-rescue OpenAiApi::ApiError => e
+rescue OpenAi::ApiError => e
   puts "Error when calling AssistantsApi->submit_tool_ouputs_to_run_with_http_info: #{e}"
 end
 ```

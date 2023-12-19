@@ -1,4 +1,4 @@
-# OpenAiApi::ListFineTunesResponse
+# OpenAi::ListFineTunesResponse
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'openai-openapi-rb'
 
-instance = OpenAiApi::ListFineTunesResponse.new(
+instance = OpenAi::ListFineTunesResponse.new(
   data: null,
   object: null
 )

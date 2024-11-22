@@ -5,8 +5,9 @@ All URIs are relative to *https://api.openai.com/v1*
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**cancel_fine_tuning_job**](FineTuningApi.md#cancel_fine_tuning_job) | **POST** /fine_tuning/jobs/{fine_tuning_job_id}/cancel | Immediately cancel a fine-tune job.  |
-| [**create_fine_tuning_job**](FineTuningApi.md#create_fine_tuning_job) | **POST** /fine_tuning/jobs | Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning)  |
+| [**create_fine_tuning_job**](FineTuningApi.md#create_fine_tuning_job) | **POST** /fine_tuning/jobs | Creates a fine-tuning job which begins the process of creating a new model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning)  |
 | [**list_fine_tuning_events**](FineTuningApi.md#list_fine_tuning_events) | **GET** /fine_tuning/jobs/{fine_tuning_job_id}/events | Get status updates for a fine-tuning job.  |
+| [**list_fine_tuning_job_checkpoints**](FineTuningApi.md#list_fine_tuning_job_checkpoints) | **GET** /fine_tuning/jobs/{fine_tuning_job_id}/checkpoints | List checkpoints for a fine-tuning job.  |
 | [**list_paginated_fine_tuning_jobs**](FineTuningApi.md#list_paginated_fine_tuning_jobs) | **GET** /fine_tuning/jobs | List your organization&#39;s fine-tuning jobs  |
 | [**retrieve_fine_tuning_job**](FineTuningApi.md#retrieve_fine_tuning_job) | **GET** /fine_tuning/jobs/{fine_tuning_job_id} | Get info about a fine-tuning job.  [Learn more about fine-tuning](/docs/guides/fine-tuning)  |
 
@@ -82,7 +83,7 @@ end
 
 > <FineTuningJob> create_fine_tuning_job(create_fine_tuning_job_request)
 
-Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
+Creates a fine-tuning job which begins the process of creating a new model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
 
 ### Examples
 
@@ -99,7 +100,7 @@ api_instance = OpenAi::FineTuningApi.new
 create_fine_tuning_job_request = OpenAi::CreateFineTuningJobRequest.new({model: OpenAi::CreateFineTuningJobRequestModel.new, training_file: 'file-abc123'}) # CreateFineTuningJobRequest | 
 
 begin
-  # Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
+  # Creates a fine-tuning job which begins the process of creating a new model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
   result = api_instance.create_fine_tuning_job(create_fine_tuning_job_request)
   p result
 rescue OpenAi::ApiError => e
@@ -115,7 +116,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
+  # Creates a fine-tuning job which begins the process of creating a new model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about fine-tuning](/docs/guides/fine-tuning) 
   data, status_code, headers = api_instance.create_fine_tuning_job_with_http_info(create_fine_tuning_job_request)
   p status_code # => 2xx
   p headers # => { ... }
@@ -207,6 +208,79 @@ end
 ### Return type
 
 [**ListFineTuningJobEventsResponse**](ListFineTuningJobEventsResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## list_fine_tuning_job_checkpoints
+
+> <ListFineTuningJobCheckpointsResponse> list_fine_tuning_job_checkpoints(fine_tuning_job_id, opts)
+
+List checkpoints for a fine-tuning job. 
+
+### Examples
+
+```ruby
+require 'time'
+require 'openai-openapi-rb'
+# setup authorization
+OpenAi.configure do |config|
+  # Configure Bearer authorization: ApiKeyAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = OpenAi::FineTuningApi.new
+fine_tuning_job_id = 'ft-AF1WoRqd3aJAHsqc9NY7iL8F' # String | The ID of the fine-tuning job to get checkpoints for. 
+opts = {
+  after: 'after_example', # String | Identifier for the last checkpoint ID from the previous pagination request.
+  limit: 56 # Integer | Number of checkpoints to retrieve.
+}
+
+begin
+  # List checkpoints for a fine-tuning job. 
+  result = api_instance.list_fine_tuning_job_checkpoints(fine_tuning_job_id, opts)
+  p result
+rescue OpenAi::ApiError => e
+  puts "Error when calling FineTuningApi->list_fine_tuning_job_checkpoints: #{e}"
+end
+```
+
+#### Using the list_fine_tuning_job_checkpoints_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ListFineTuningJobCheckpointsResponse>, Integer, Hash)> list_fine_tuning_job_checkpoints_with_http_info(fine_tuning_job_id, opts)
+
+```ruby
+begin
+  # List checkpoints for a fine-tuning job. 
+  data, status_code, headers = api_instance.list_fine_tuning_job_checkpoints_with_http_info(fine_tuning_job_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ListFineTuningJobCheckpointsResponse>
+rescue OpenAi::ApiError => e
+  puts "Error when calling FineTuningApi->list_fine_tuning_job_checkpoints_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **fine_tuning_job_id** | **String** | The ID of the fine-tuning job to get checkpoints for.  |  |
+| **after** | **String** | Identifier for the last checkpoint ID from the previous pagination request. | [optional] |
+| **limit** | **Integer** | Number of checkpoints to retrieve. | [optional][default to 10] |
+
+### Return type
+
+[**ListFineTuningJobCheckpointsResponse**](ListFineTuningJobCheckpointsResponse.md)
 
 ### Authorization
 

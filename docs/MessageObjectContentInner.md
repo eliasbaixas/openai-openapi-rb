@@ -15,6 +15,8 @@ OpenAi::MessageObjectContentInner.openapi_one_of
 # =>
 # [
 #   :'MessageContentImageFileObject',
+#   :'MessageContentImageUrlObject',
+#   :'MessageContentRefusalObject',
 #   :'MessageContentTextObject'
 # ]
 ```
@@ -44,6 +46,8 @@ OpenAi::MessageObjectContentInner.build(data_that_doesnt_match)
 #### Return type
 
 - `MessageContentImageFileObject`
+- `MessageContentImageUrlObject`
+- `MessageContentRefusalObject`
 - `MessageContentTextObject`
 - `nil` (if no type matches)
 

@@ -15,8 +15,8 @@ OpenAi::RunStepDetailsToolCallsObjectToolCallsInner.openapi_one_of
 # =>
 # [
 #   :'RunStepDetailsToolCallsCodeObject',
-#   :'RunStepDetailsToolCallsFunctionObject',
-#   :'RunStepDetailsToolCallsRetrievalObject'
+#   :'RunStepDetailsToolCallsFileSearchObject',
+#   :'RunStepDetailsToolCallsFunctionObject'
 # ]
 ```
 
@@ -45,7 +45,7 @@ OpenAi::RunStepDetailsToolCallsObjectToolCallsInner.build(data_that_doesnt_match
 #### Return type
 
 - `RunStepDetailsToolCallsCodeObject`
+- `RunStepDetailsToolCallsFileSearchObject`
 - `RunStepDetailsToolCallsFunctionObject`
-- `RunStepDetailsToolCallsRetrievalObject`
 - `nil` (if no type matches)
 

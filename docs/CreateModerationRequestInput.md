@@ -14,6 +14,7 @@ require 'openai-openapi-rb'
 OpenAi::CreateModerationRequestInput.openapi_one_of
 # =>
 # [
+#   :'Array<CreateModerationRequestInputOneOfInner>',
 #   :'Array<String>',
 #   :'String'
 # ]
@@ -29,7 +30,7 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 require 'openai-openapi-rb'
 
 OpenAi::CreateModerationRequestInput.build(data)
-# => #<Array<String>:0x00007fdd4aab02a0>
+# => #<Array<CreateModerationRequestInputOneOfInner>:0x00007fdd4aab02a0>
 
 OpenAi::CreateModerationRequestInput.build(data_that_doesnt_match)
 # => nil
@@ -43,6 +44,7 @@ OpenAi::CreateModerationRequestInput.build(data_that_doesnt_match)
 
 #### Return type
 
+- `Array<CreateModerationRequestInputOneOfInner>`
 - `Array<String>`
 - `String`
 - `nil` (if no type matches)
